@@ -1,0 +1,1022 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\A Note.ico"
+IDI_ALARM               ICON                    "res\\alarm.ico"
+IDI_ALARM1              ICON                    "res\\alarm1.ico"
+IDI_DOWNLOADNOTE6       ICON                    "res\\ico00006.ico"
+IDI_DOWNLOADNOTE1       ICON                    "res\\ico00001.ico"
+IDI_DOWNLOADNOTE2       ICON                    "res\\ico00002.ico"
+IDI_DOWNLOADNOTE3       ICON                    "res\\ico00003.ico"
+IDI_DOWNLOADNOTE4       ICON                    "res\\ico00004.ico"
+IDI_DOWNLOADNOTE5       ICON                    "res\\ico00005.ico"
+IDI_DOWNLOADNOTE        ICON                    "res\\download.ico"
+IDI_DOWNLOADNOTE7       ICON                    "res\\ico00007.ico"
+IDI_UPLOADNOTE7         ICON                    "res\\ico00014.ico"
+IDI_UPLOADNOTE2         ICON                    "res\\ico00009.ico"
+IDI_UPLOADNOTE3         ICON                    "res\\ico00010.ico"
+IDI_UPLOADNOTE4         ICON                    "res\\ico00011.ico"
+IDI_UPLOADNOTE5         ICON                    "res\\ico00012.ico"
+IDI_UPLOADNOTE6         ICON                    "res\\ico00013.ico"
+IDI_UPLOADNOTE1         ICON                    "res\\ico00008.ico"
+IDI_UPLOADNOTE          ICON                    "res\\uploadno.ico"
+IDI_TRAYMAIN            ICON                    "res\\traymain.ico"
+IDI_TRAYMAIN1           ICON                    "res\\ico00015.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "_TRAYMAIN_"
+    BEGIN
+        MENUITEM "New note",                    ID_TRAYMAIN_NEWNOTE
+        POPUP "Import / Export"
+        BEGIN
+            MENUITEM "Import",                      ID_TRAYMAIN_IMPORTEXPORT_IMPORT
+            MENUITEM "Export",                      ID_TRAYMAIN_IMPORTEXPORT_EXPORT
+        END
+        POPUP "Upload / Download"
+        BEGIN
+            MENUITEM "Upload notes",                ID_TRAYMAIN_UPLOADDOWNLOAD_UPLOADNOTES
+            MENUITEM "Download notes",              ID_TRAYMAIN_UPLOADDOWNLOAD_DOWNLOADNOTES
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Stay on top",                 ID_TRAYMAIN_STAYONTOP, CHECKED
+        MENUITEM "Minimize all",                ID_TRAYMAIN_MINIMIZEALL
+        POPUP "Restore"
+        BEGIN
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM1
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM2
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM3
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM4
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM5
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM6
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM7
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM8
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM9
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM10
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM11
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM12
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM13
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM14
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM15
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM16
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM17
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM18
+            MENUITEM "",                            ID_MINIMIZEDMENUITEM19
+            MENUITEM "Restore All",                 ID_TRAYMAIN_RESTORE_RESTOREALL
+            MENUITEM SEPARATOR
+        END
+        MENUITEM "Recycle bin...",              ID_TRAYMAIN_RECYCLEBIN
+        MENUITEM SEPARATOR
+        MENUITEM "Visit A Note's website",      ID_TRAYMAIN_VISITANOTEWEBSITE
+        MENUITEM "Check for updates",           ID_TRAYMAIN_CHECKFORUPDATES
+        MENUITEM SEPARATOR
+        MENUITEM "FAQ",                         ID_TRAYMAIN_FAQ
+        MENUITEM "Send Bug / Feedback...",      ID_TRAYMAIN_SENDBUGG
+        MENUITEM "Options...",                  ID_TRAYMAIN_OPTIONS
+        MENUITEM "About...",                    ID_APP_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_APP_EXIT
+    END
+END
+
+IDR_POPUPMENU MENU 
+BEGIN
+    POPUP "_POPUPMENU_"
+    BEGIN
+        MENUITEM "Cut",                         ID_POPUPMENU_CUT
+        MENUITEM "Copy",                        ID_POPUPMENU_COPY
+        MENUITEM "Paste",                       ID_POPUPMENU_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Font...",                     ID_POPUPMENU_FONT
+        MENUITEM "Note color...",               ID_POPUPMENU_NOTECOLOR
+        MENUITEM SEPARATOR
+        MENUITEM "Set title...",                ID_POPUPMENU_SETTITLE
+        MENUITEM "Alarm...",                    ID_POPUPMENU_ALARM
+        MENUITEM SEPARATOR
+        MENUITEM "Email...",                    ID_POPUPMENU_EMAIL
+        MENUITEM "Print...",                    ID_POPUPMENU_PRINT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 266, 154
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Radu",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,22,33,10
+END
+
+#if defined(APSTUDIO_INVOKED) || defined(_SHOWHELP)
+#if defined(APSTUDIO_INVOKED)
+IDD_DLGGUIDE$(_SHOWHELP) DIALOG  0, 0, 268, 187
+#else
+IDD_DLGGUIDE DIALOG  0, 0, 268, 187
+#endif
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Don't show again",IDC_SHOWAGAIN,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | BS_FLAT | WS_TABSTOP,7,167,101,12
+    PUSHBUTTON      "Finish",IDC_FINISH,215,166,46,13,BS_FLAT
+    PUSHBUTTON      "Previous",IDC_PREVIOUS,112,166,46,13,BS_FLAT | WS_DISABLED
+    DEFPUSHBUTTON   "Next",IDC_NEXT,159,166,46,13,BS_FLAT
+END
+#endif
+
+IDD_OPTIONSALARM DIALOGEX 0, 0, 210, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        " Alarm ",IDC_STATIC1,0,6,204,74,BS_FLAT
+    CONTROL         "Blink the note on alarm",IDC_BLINK,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,11,20,180,8
+    CONTROL         "Play a sound on alarm",IDC_PLAYSOUND,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,11,32,184,9
+    LTEXT           "Sound file",IDC_STATIC2,12,49,141,8
+    EDITTEXT        IDC_SOUNDFILE,12,59,134,13,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "Browse...",IDC_BROWSE,149,58,50,15,BS_FLAT
+END
+
+IDD_OPTIONSDATABASE DIALOGEX 0, 0, 210, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        " User information ",IDC_STATIC1,0,6,204,39,BS_FLAT
+    CONTROL         "Download the notes when the program starts and upload them on exit",IDC_UPLOADDOWNLOAD,
+                    "Button",BS_AUTOCHECKBOX | BS_TOP | BS_MULTILINE | BS_FLAT | WS_TABSTOP,11,69,180,18
+    LTEXT           "User name",IDC_STATIC2,11,17,90,8
+    EDITTEXT        IDC_USERNAME,11,27,90,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Password",IDC_STATIC3,108,17,89,8
+    EDITTEXT        IDC_PASSWORD,107,27,90,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    GROUPBOX        " Upload / Download ",IDC_STATIC4,0,54,204,92,BS_FLAT
+    PUSHBUTTON      "Delete Notes",IDC_DELETENOTES,9,123,53,15,BS_FLAT
+    LTEXT           "Delete all my notes that I have on the server",IDC_STATIC6,70,123,127,17
+    LTEXT           "Start to download the notes after (seconds)",IDC_STATIC5,10,93,187,9
+    EDITTEXT        IDC_DOWNLOADAFTER,10,103,39,12,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_OPTIONSGENERAL DIALOGEX 0, 0, 210, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        " Creation ",IDC_STATIC1,0,6,204,50,BS_FLAT
+    LTEXT           "Default title",IDC_STATIC5,11,20,43,8
+    EDITTEXT        IDC_DEFAULTTITLE,11,30,90,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    GROUPBOX        " Delete ",IDC_STATIC2,0,66,204,29,BS_FLAT
+    CONTROL         "Warn when deleting a note",IDC_WARNONDELETE,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,14,78,183,11
+    GROUPBOX        " Version check ",IDC_STATIC3,0,105,204,29,BS_FLAT
+    CONTROL         "See if there are any newer versions of the program",IDC_VERSIONCHECK,
+                    "Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,14,117,181,11
+    LTEXT           "Use %time% for the current time and %date% for the current date",IDC_STATIC4,105,28,93,24
+END
+
+IDD_OPTIONSLOOKS DIALOGEX 0, 0, 210, 146
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Randomize the note color",IDC_RNDCOLOR,"Button",BS_AUTOCHECKBOX | BS_TOP | BS_MULTILINE | BS_FLAT | WS_TABSTOP,14,15,179,11
+    LTEXT           "Default note color",IDC_STATIC2,34,30,104,10
+    CONTROL         "Thin border",IDC_THINBORDER,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,14,46,147,9
+    PUSHBUTTON      "Change...",IDC_CHANGENOTECOLOR,144,26,49,13,BS_FLAT
+    GROUPBOX        " Looks ",IDC_STATIC1,0,0,204,61,BS_FLAT
+END
+
+IDD_SETALARM DIALOGEX 0, 0, 199, 129
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set alarm"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,142,7,50,14,BS_FLAT
+    PUSHBUTTON      "Cancel",IDCANCEL,142,24,50,14,BS_FLAT
+    CONTROL         "Use alarm",IDC_USEALARM,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,7,8,70,11
+    CONTROL         "DateTimePicker1",IDC_TIME,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,79,7,56,14
+    CONTROL         "MonthCalendar1",IDC_DATE,"SysMonthCal32",WS_TABSTOP,7,26,130,96
+END
+
+IDD_SETTITLE DIALOGEX 0, 0, 186, 46
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change title"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TITLE,"RichEdit20A",ES_AUTOHSCROLL | WS_TABSTOP,7,24,116,14,WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14,BS_FLAT
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14,BS_FLAT
+    LTEXT           "Title",IDC_STATIC1,7,15,21,9
+END
+
+IDD_SNOOZE DIALOG  0, 0, 117, 28
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Snooze or turn off"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Snooze",IDOK,7,7,50,14,BS_FLAT
+    PUSHBUTTON      "Turn off",IDCANCEL,60,7,50,14,BS_FLAT
+END
+
+IDD_NOTE DIALOG  0, 0, 128, 105
+STYLE DS_SETFONT | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_OPTIONS DIALOG  0, 0, 318, 205
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,206,184,50,14,BS_FLAT
+    PUSHBUTTON      "Cancel",IDCANCEL,258,184,50,14,BS_FLAT
+    CONTROL         "Tree1",IDC_PAGE_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,7,90,172
+    LTEXT           "Static",IDC_CAPTION_BAR,101,7,207,14,SS_CENTERIMAGE | SS_SUNKEN
+    CONTROL         "",IDC_DLG_FRAME,"Static",SS_GRAYFRAME | NOT WS_VISIBLE,100,28,208,151
+END
+
+IDD_USERINFORMATION DIALOGEX 0, 0, 200, 116
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "User information"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,143,79,50,14,BS_FLAT
+    PUSHBUTTON      "Cancel",IDCANCEL,143,95,50,14,BS_FLAT
+    LTEXT           "User name",IDC_STATIC1,7,7,165,9
+    LTEXT           "Password",IDC_STATIC2,7,32,163,8
+    LTEXT           "Email (optional)",IDC_STATIC3,7,56,159,8
+    EDITTEXT        IDC_USERNAME,7,16,129,13,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_PASSWORD,7,40,129,13,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EMAIL,7,66,129,13,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "NOTE: The email will not be shared, but only used to send you the password (in case you forget it)",IDC_STATIC4,7,83,129,26
+END
+
+IDD_USEUSERINFORMATION DIALOGEX 0, 0, 200, 60
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "User information"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,143,23,50,14,BS_FLAT
+    PUSHBUTTON      "Cancel",IDCANCEL,143,39,50,14,BS_FLAT
+    LTEXT           "User name",IDC_STATIC1,7,7,63,9
+    LTEXT           "Password",IDC_STATIC2,7,32,63,8
+    EDITTEXT        IDC_USERNAME,7,16,129,13,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_PASSWORD,7,40,129,13,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_OPTIONSFONT DIALOG  0, 0, 210, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        " Default note font ",IDC_STATIC1,0,6,204,66,BS_FLAT
+    PUSHBUTTON      "Change font...",IDC_CHANGEFONT,13,23,67,14,BS_FLAT
+    LTEXT           "Try here:",IDC_STATIC2,13,42,51,9
+END
+
+IDD_OPTIONSNEWNOTE DIALOGEX 0, 0, 210, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        " Position of new notes ",IDC_STATIC1,0,6,204,138,BS_FLAT
+    CONTROL         "Dock left",IDC_DOCKLEFT,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,14,19,96,10
+    CONTROL         "Dock top",IDC_DOCKTOP,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,14,29,91,10
+    CONTROL         "Dock right",IDC_DOCKRIGHT,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,14,38,97,10
+    CONTROL         "Dock bottom",IDC_DOCKBOTTOM,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,14,48,76,10
+    EDITTEXT        IDC_LEFT,14,86,33,9,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Left",IDC_STATIC3,14,77,70,8
+    EDITTEXT        IDC_WIDTH,14,124,33,9,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Width",IDC_STATIC5,14,116,73,8
+    EDITTEXT        IDC_TOP,14,105,33,9,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Top",IDC_STATIC4,14,97,71,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,91,62,106,77
+    LTEXT           "Your screen",IDC_STATIC2,92,52,105,10
+END
+
+IDD_OPTIONSTRANSPARANCY DIALOG  0, 0, 210, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        " Transparancy (only Windows 2000/XP) ",IDC_STATIC1,0,6,204,74,BS_FLAT
+    CONTROL         "Slider1",IDC_TRANSPARANCYNORMAL,"msctls_trackbar32",TBS_TOP | TBS_NOTICKS | WS_TABSTOP,11,33,117,10
+    LTEXT           "When the notes are minimized, but still visible",IDC_STATIC3,11,52,186,8
+    CONTROL         "Slider1",IDC_TRANSPARANCYMINIMIZE,"msctls_trackbar32",TBS_TOP | TBS_NOTICKS | WS_TABSTOP,11,64,117,10
+    LTEXT           "When the notes are in normal mode",IDC_STATIC2,11,22,187,9
+END
+
+IDD_OPTIONSHOTKEY DIALOGEX 0, 0, 210, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        " Hot key ",IDC_STATIC1,0,6,204,78,BS_FLAT
+    CONTROL         "CTRL",IDC_CTRL,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,67,46,33,8
+    CONTROL         "SHIFT",IDC_SHIFT,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,25,32,36,9
+    CONTROL         "ALT",IDC_ALT,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,25,46,42,8
+    CONTROL         "WIN",IDC_WIN,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,67,32,31,8
+    COMBOBOX        IDC_CHARACTER,114,42,81,101,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Character",IDC_STATIC2,114,31,46,10
+    PUSHBUTTON      " Set hot key",IDC_SETHOTKEY,134,62,60,16,BS_FLAT
+    CONTROL         "Use hot key",IDC_USEHOTKEY,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,12,20,64,9
+    LTEXT           "",IDC_STATUSTEXT,12,67,118,8
+END
+
+IDD_OPTIONSSERVER DIALOGEX 0, 0, 210, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        " Server's address ",IDC_STATIC1,0,6,204,121,BS_FLAT
+    LTEXT           "Address (http://myserver.com)",IDC_STATIC2,16,37,181,9
+    EDITTEXT        IDC_ADDRESS,16,48,173,13,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "Use default server",IDC_USEDEFAULTSERVER,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,12,21,182,11
+    LTEXT           "Port (http://myserver.com:8080)",IDC_STATIC3,16,66,182,9
+    EDITTEXT        IDC_PORT,16,77,173,13,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Path (http://myserver.com/MYPATH/) Must end with /",IDC_STATIC4,16,96,182,9
+    EDITTEXT        IDC_PATH,16,107,173,13,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_RECYCLEBIN DIALOGEX 0, 0, 171, 217
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Recycle bin"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,114,7,50,14,BS_FLAT
+    PUSHBUTTON      "Delete",IDC_DELETE,7,7,50,14,BS_FLAT
+    PUSHBUTTON      "Restore",IDC_RESTORE,60,7,50,14,BS_FLAT
+    LTEXT           "Title",IDC_STATIC1,7,26,17,8
+    LISTBOX         IDC_TITLES,7,35,157,175,LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+END
+
+IDD_RECYCLEBINHELP DIALOG  0, 0, 284, 118
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Recyle bin help"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,227,7,50,14,BS_FLAT
+    CONTROL         "Show time message next time",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,7,100,243,11
+    LTEXT           "The notes' title will appear in a box. If you want to look at that note you simply doubleclick on it and the note will be created as it were when you deleted it.",IDC_STATIC1,7,7,212,26
+    LTEXT           "If you want to restore a note you simply select one or multiple with shift and ctrl and then restore it with the restore-button. The same goes for delete.",IDC_STATIC2,7,40,218,30
+    LTEXT           "NOTE: If you delete one or several notes they will be deleted permanently.",IDC_STATIC3,7,73,240,23
+END
+
+IDD_OPTIONSRECYCLEBIN DIALOGEX 0, 0, 210, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        " Recycle bin ",IDC_STATIC1,0,6,204,60,BS_FLAT
+    EDITTEXT        IDC_NUMBEROFDELETEDNOTES,9,29,33,10,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Maximum deleted notes that will be saved (0 for infinitive)",IDC_STATIC2,9,18,184,9
+    CONTROL         "Sort the notes descending",IDC_SORTDESCENDING,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,10,50,185,9
+END
+
+IDD_DELETEINFORMATION DIALOG  0, 0, 256, 97
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Delete a note"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,199,7,50,14,BS_FLAT
+    LTEXT           "When you delete a note, it will be saved in a file.\nBy selecting the recycle bin in the tray-menu, you will be\nable to either permanently delete a note or restore it.",IDC_STATIC1,7,7,181,27
+    LTEXT           " If you hold the shift-button on your keyboard when you press the delete button on a note, the note will be permanently erased",IDC_STATIC2,7,42,185,29
+    CONTROL         "Show this warning next time",IDC_SHOWAGAIN,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,7,81,242,10
+END
+
+IDD_OPTIONSTOOLBAR DIALOGEX 0, 0, 210, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "--->",IDC_ADD,83,69,34,13,BS_FLAT
+    PUSHBUTTON      "<---",IDC_REMOVE,83,83,34,13,BS_FLAT
+    CONTROL         "List1",IDC_AVAILABLE,"SysListView32",LVS_SMALLICON | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_TABSTOP,13,27,64,113,WS_EX_STATICEDGE
+    CONTROL         "List1",IDC_INUSE,"SysListView32",LVS_SMALLICON | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_TABSTOP,124,27,64,113,WS_EX_STATICEDGE
+    GROUPBOX        " Toolbar ",IDC_STATIC1,0,6,204,140,BS_FLAT
+    LTEXT           "Available",IDC_STATIC2,14,17,106,8
+    LTEXT           "In use",IDC_STATIC3,123,17,74,8
+    PUSHBUTTON      "Up",IDC_UP,83,28,34,13,BS_FLAT
+    PUSHBUTTON      "Down",IDC_DOWN,83,43,34,13,BS_FLAT
+END
+
+IDD_OPTIONSBEHAVIOUR DIALOG  0, 0, 210, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Create a new note",IDC_CLICKONCE,"Button",BS_AUTORADIOBUTTON | BS_FLAT | WS_GROUP,24,44,173,9
+    CONTROL         "Hide and show the notes",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | BS_FLAT,24,54,173,9
+    CONTROL         "Doubleclick on titlebar -> restore / minimize the note",IDC_DOUBLECLICKTITLEBAR,
+                    "Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,11,71,186,9
+    CONTROL         "When minimized move the cursor to minimize-button",IDC_MINIMIZEMOVECURSOR,
+                    "Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,11,82,187,9
+    CONTROL         "Dockable",IDC_DOCKABLE,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,11,93,186,9
+    CONTROL         "When minimized show only the titlebar",IDC_HIDEONMINIMIZE,
+                    "Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,11,104,187,9
+    GROUPBOX        " Behaviour ",IDC_STATIC4,0,6,204,116,BS_FLAT
+    LTEXT           "What happens when you click once on the tray icon?",IDC_STATIC3,14,23,182,16
+END
+
+IDD_LANGUAGE DIALOGEX 0, 0, 393, 212
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit language"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,336,191,50,14,BS_FLAT
+    CONTROL         "List1",IDC_ENGLISH,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_TABSTOP,7,16,321,123,WS_EX_STATICEDGE
+    LTEXT           "English",IDC_STATIC1,7,7,171,9
+    EDITTEXT        IDC_OTHERLANGUAGE,7,167,321,38,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    COMBOBOX        IDC_LANGUAGE,7,150,121,114,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_OPTIONSLANGUAGE DIALOG  0, 0, 210, 146
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        " Language ",IDC_STATIC1,0,0,204,80,BS_FLAT
+    PUSHBUTTON      "Edit language...",IDC_EDITLANGUAGE,13,53,67,16,BS_FLAT
+    PUSHBUTTON      "Add language...",IDC_ADDLANGUAGE,84,53,67,16,BS_FLAT
+    LTEXT           "Select language",IDC_STATIC2,14,13,54,8
+    COMBOBOX        IDC_LANGUAGE,13,23,94,86,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_CREATENEWLANGUAGE DIALOGEX 0, 0, 221, 66
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add a new language"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,164,7,50,14,BS_FLAT
+    PUSHBUTTON      "Cancel",IDCANCEL,164,24,50,14,BS_FLAT
+    EDITTEXT        IDC_INIFILE,7,18,113,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Enter the language you want to create",IDC_STATIC1,7,7,148,11
+    EDITTEXT        IDC_ENGLISHNAME,7,47,113,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Enter the english name for the language",IDC_STATIC2,7,36,148,11
+END
+
+IDD_OPTIONSCHARSET DIALOGEX 0, 0, 210, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        " Unicode ",IDC_STATIC1,0,6,204,78,BS_FLAT
+    COMBOBOX        IDC_CHARSET,11,30,109,101,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Charset",IDC_STATIC2,11,19,46,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,2,1,0
+ PRODUCTVERSION 4,2,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "A Note"
+            VALUE "FileDescription", "A Note"
+            VALUE "FileVersion", "4, 2, 1, 0"
+            VALUE "InternalName", "A Note"
+            VALUE "LegalCopyright", "Copyright (C) 2003-2004"
+            VALUE "OriginalFilename", "A Note.EXE"
+            VALUE "ProductName", "A Note Application"
+            VALUE "ProductVersion", "4, 2, 1, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    "IDD_DLGGUIDE$(_SHOWHELP)", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_OPTIONSALARM, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_OPTIONSDATABASE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_OPTIONSGENERAL, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_OPTIONSLOOKS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_SETALARM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_SETTITLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_SNOOZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 110
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+
+    IDD_NOTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 121
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_USERINFORMATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_USEUSERINFORMATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    IDD_OPTIONSFONT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_OPTIONSNEWNOTE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_OPTIONSTRANSPARANCY, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_OPTIONSHOTKEY, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_OPTIONSSERVER, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_RECYCLEBIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+    END
+
+    IDD_RECYCLEBINHELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_OPTIONSRECYCLEBIN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_DELETEINFORMATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_OPTIONSTOOLBAR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_OPTIONSBEHAVIOUR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_LANGUAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 386
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 205
+    END
+
+    IDD_OPTIONSLANGUAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+
+    IDD_CREATENEWLANGUAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 214
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    IDD_OPTIONSCHARSET, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MENUBAR             BITMAP                  "res\\menubar.bmp"
+IDB_NOTEALARM           BITMAP                  "res\\notealar.bmp"
+IDB_NOTEALARM1          BITMAP                  "res\\bmp00002.bmp"
+IDB_NOTECLOSE           BITMAP                  "res\\close.bmp"
+IDB_NOTECLOSE1          BITMAP                  "res\\noteclos.bmp"
+IDB_NOTEMINIMIZE        BITMAP                  "res\\minimize.bmp"
+IDB_NOTEMINIMIZE1       BITMAP                  "res\\notemini.bmp"
+IDB_NOTEMINIMIZE2       BITMAP                  "res\\bmp00001.bmp"
+IDB_NOTEMINIMIZE3       BITMAP                  "res\\bmp00003.bmp"
+IDB_NOTEBULLET          BITMAP                  "res\\notebull.bmp"
+IDB_NOTEBULLET1         BITMAP                  "res\\bmp00004.bmp"
+IDB_SLIDERIGHT          BITMAP                  "res\\sliderig.bmp"
+IDB_SLIDERIGHT1         BITMAP                  "res\\bmp00005.bmp"
+IDB_SLIDELEFT           BITMAP                  "res\\slidelef.bmp"
+IDB_SLIDELEFT1          BITMAP                  "res\\bmp00006.bmp"
+IDB_TOOLBAR             BITMAP                  "res\\toolbar.bmp"
+IDB_BOLD                BITMAP                  "res\\bold.bmp"
+IDB_BOLD1               BITMAP                  "res\\bold1.bmp"
+IDB_UNDERLINE           BITMAP                  "res\\underlin.bmp"
+IDB_UNDERLINE1          BITMAP                  "res\\bmp00007.bmp"
+IDB_ITALIC              BITMAP                  "res\\italic.bmp"
+IDB_ITALIC1             BITMAP                  "res\\italic1.bmp"
+IDB_STRIKEOUT           BITMAP                  "res\\bold2.bmp"
+IDB_STRIKEOUT1          BITMAP                  "res\\strikeou.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MENUBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_POPUPMENU_CUT
+    BUTTON      ID_POPUPMENU_COPY
+    BUTTON      ID_POPUPMENU_PASTE
+    SEPARATOR
+    BUTTON      ID_POPUPMENU_FONT
+    BUTTON      ID_POPUPMENU_NOTECOLOR
+    BUTTON      ID_POPUPMENU_ALARM
+    BUTTON      ID_POPUPMENU_SETTITLE
+    SEPARATOR
+    BUTTON      ID_TRAYMAIN_MINIMIZEALL
+    BUTTON      ID_TRAYMAIN_RESTOREALL
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_TRAYMAIN_ENTERKEY
+    BUTTON      ID_TRAYMAIN_VISITANOTEWEBSITE
+    BUTTON      ID_TRAYMAIN_FAQ
+    BUTTON      ID_TRAYMAIN_IMPORTEXPORT_EXPORT
+    BUTTON      ID_TRAYMAIN_IMPORTEXPORT_IMPORT
+    BUTTON      ID_POPUPMENU_EMAIL
+    BUTTON      ID_TRAYMAIN_UPLOADDOWNLOAD_DOWNLOADNOTES
+    BUTTON      ID_TRAYMAIN_UPLOADDOWNLOAD_UPLOADNOTES
+    BUTTON      ID_POPUPMENU_PRINT
+    BUTTON      ID_TRAYMAIN_NEWNOTE
+    BUTTON      ID_TRAYMAIN_OPTIONS
+    BUTTON      ID_TRAYMAIN_SENDBUGG
+    BUTTON      ID_TRAYMAIN_RESTORE_RESTOREALL
+    BUTTON      ID_TRAYMAIN_RECYCLEBIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONSHOTKEY DLGINIT
+BEGIN
+    IDC_CHARACTER, 0x403, 2, 0
+0x0041, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0042, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0043, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0044, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0045, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0046, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0047, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0048, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0049, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x004a, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x004b, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x004c, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x004d, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x004e, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x004f, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0050, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0051, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0052, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0053, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0054, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0055, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0056, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0057, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0058, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x0059, 
+    IDC_CHARACTER, 0x403, 2, 0
+0x005a, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "A Note"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "A Note"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Swedish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_SVE)
+#ifdef _WIN32
+LANGUAGE LANG_SWEDISH, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\A Note.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Swedish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\A Note.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

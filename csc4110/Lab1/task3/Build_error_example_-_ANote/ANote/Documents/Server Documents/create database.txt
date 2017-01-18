@@ -1,0 +1,52 @@
+# phpMyAdmin SQL Dump
+# 
+# Databas : `anote`
+# 
+
+# --------------------------------------------------------
+
+#
+
+CREATE TABLE `allusers` (
+  `userid` varchar(100) NOT NULL default '',
+  `numberofcalls` int(11) NOT NULL default '0',
+  UNIQUE KEY `userid` (`userid`)
+) TYPE=MyISAM;
+
+# --------------------------------------------------------
+
+
+CREATE TABLE `note` (
+  `userid` int(11) NOT NULL default '0',
+  `noteid` text NOT NULL,
+  `noteversion` int(11) NOT NULL default '0',
+  `text` text NOT NULL,
+  `alarmtime` text NOT NULL,
+  `usealarm` enum('true','false') default 'false',
+  `title` text NOT NULL,
+  `visible` enum('true','false') NOT NULL default 'true',
+  `notecolor` int(11) NOT NULL default '0',
+  `positionleft` int(11) NOT NULL default '0',
+  `positiontop` int(11) NOT NULL default '0',
+  `width` int(11) NOT NULL default '0',
+  `height` int(11) NOT NULL default '0',
+  `dockedleft` text NOT NULL,
+  `dockedtop` text NOT NULL,
+  `dockedright` text NOT NULL,
+  `dockedbottom` text NOT NULL
+) TYPE=MyISAM;
+
+# --------------------------------------------------------
+
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL auto_increment,
+  `user` text NOT NULL,
+  `password` text NOT NULL,
+  `email` text NOT NULL,
+  `numlogs` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `Email` (`email`(100)),
+  UNIQUE KEY `User` (`user`(50))
+) TYPE=MyISAM AUTO_INCREMENT=891 ;
+    

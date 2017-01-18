@@ -1,0 +1,19 @@
+1) On line 26 Player *team[5] makes a pointer array called team of type player and allocates 5 player slots labeled 0-4. Given that team is a pointer, each pointer must point to a valid address of type player. Since class Offense and Defense inherit from class player then they are assigned by their memory address with &.
+
+2) A loop would not be best because different objects are being assigned different numbers for different values. If they shared some commonality then maybe a loop could be used but since Offense and Defense use either tackle or yards and the values don't follow any sort of sequence then using a loop is a bad idea.
+
+3) The 3 commands listed are preprocessor macros their function is the same as that of #pragma once whereas they serve to define a header a single time and not overwrite or overload previously defined members and methods.
+
+4) First off it needs to be initialized first in the constructor of it's derived classes so implicit construction or a nested constructor call would be needed. Next, there are two approaches for accessing the value the first is to declare a friend function that enables access to that member. The second is to create an extra variable to copy the value made by the constructor and store it that way. 
+
+5) It's declared as protected which will allow access to it via derived methods. It shouldn't be public because it is a sensitive data member whose information should be encapsulated. But it shouldn't be private either because we need to access it and write to it.
+
+6) It is a pure virtual function meaning that it has no definiton and is meant to be overriden in derived classes. Since it is meant to be overridden the object type declares how it is implemented.
+
+7) Const basically brands this function as an accessor method. Meaning that it cannot have the potential to modify member data like mutator methods.
+
+8) setNumber because regardless of which side a player is on. All of them will always have a number and the process of getting that number is the same so there is no need to have to re-write it.
+
+9) Player is an abstract class because it contains a pure virtual function
+
+10) Access levels of inheritance. I remembered that if you change the access level in changes the level that each inherited member is viewed by in the derived class.
