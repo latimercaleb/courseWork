@@ -1,0 +1,11 @@
+In task 3 the first error I received was about build tools to remedy that, I opened solution explorer right clicked the sln file. Clicked retarget solution, clean solution, and rebuild solution.
+
+Next, I received an uninstalled external error. This meant that something was wrong with a library or header or implementation file, but there was only one error so one file was the source of my problem. 
+
+Upon closer inspection the name appeared to contain something about DlgOptionsLooks.
+
+Upon inspecting the class file I noticed that DoDataExchange method had a green line under it meaning that it was undefined.
+
+Looking at the implementation file I removed the comments around that function.
+
+After rebuilding code compiled successfully and application opened.  
