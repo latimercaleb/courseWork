@@ -1,0 +1,20 @@
+﻿Build started 1/15/2017 6:14:56 PM.
+     1>Project "E:\GitHub\courseWork\csc3400\HCI Design Project\CSC3400 final version of project- OFFICAL VERSION\CSC3400 final version\CSC3400 final version.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\CSC3400 .FEC54F17.tlog\unsuccessfulbuild".
+       ClCompile:
+         E:\Prog Tools\VC\bin\CL.exe /c /I"E:\GitHub\courseWork\csc3400\HCI Design Project\CSC3400 final version of project- OFFICAL VERSION\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/include/" /I"C:\Users\Kaz\Desktop\CSC3400 final version\CSC3400 final version\Glew and Glut-1\freeglut\include\GL" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp objLoader.cpp
+         objLoader.cpp
+     1>e:\github\coursework\csc3400\hci design project\csc3400 final version of project- offical version\csc3400 final version\objloader.cpp(98): warning C4018: '<': signed/unsigned mismatch
+     1>e:\github\coursework\csc3400\hci design project\csc3400 final version of project- offical version\csc3400 final version\objloader.cpp(104): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+         Main.cpp
+         Generating Code...
+       Link:
+         E:\Prog Tools\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\GitHub\courseWork\csc3400\HCI Design Project\CSC3400 final version of project- OFFICAL VERSION\Debug\CSC3400 final version.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Kaz\Desktop\CSC3400 final version\CSC3400 final version\Glew and Glut-1\freeglut\lib" "E:\GitHub\courseWork\csc3400\HCI Design Project\CSC3400 final version of project- OFFICAL VERSION\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/lib/Win32\glew32.lib" "E:\GitHub\courseWork\csc3400\HCI Design Project\CSC3400 final version of project- OFFICAL VERSION\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/lib/Win32\glfw3dll.lib" "E:\GitHub\courseWork\csc3400\HCI Design Project\CSC3400 final version of project- OFFICAL VERSION\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/lib/Win32\freeglut.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib freeglut.lib "C:\Users\Kaz\Desktop\CSC3400 final version\CSC3400 final version\Glew and Glut-1\glew-1.11.0\lib\glew32.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"E:\GitHub\courseWork\csc3400\HCI Design Project\CSC3400 final version of project- OFFICAL VERSION\Debug\CSC3400 final version.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\GitHub\courseWork\csc3400\HCI Design Project\CSC3400 final version of project- OFFICAL VERSION\Debug\CSC3400 final version.lib" /MACHINE:X86 Debug\Main.obj
+         Debug\objLoader.obj
+     1>LINK : fatal error LNK1104: cannot open file 'freeglut.lib'
+     1>Done Building Project "E:\GitHub\courseWork\csc3400\HCI Design Project\CSC3400 final version of project- OFFICAL VERSION\CSC3400 final version\CSC3400 final version.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:06.67

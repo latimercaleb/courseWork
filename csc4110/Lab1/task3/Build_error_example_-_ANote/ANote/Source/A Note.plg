@@ -1,0 +1,200 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: A Note - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ttmca\LOCALS~1\Temp\RSP396.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MCBS" /FR"Debug/" /Fp"Debug/A Note.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\tmp\A Note\Source\A Note.cpp"
+"C:\tmp\A Note\Source\AutoRichEditCtrl.cpp"
+"C:\tmp\A Note\Source\Base64.cpp"
+"C:\tmp\A Note\Source\ChildView.cpp"
+"C:\tmp\A Note\Source\DlgCreateNewLanguage.cpp"
+"C:\tmp\A Note\Source\DlgDeleteInformation.cpp"
+"C:\tmp\A Note\Source\DlgGuide.cpp"
+"C:\tmp\A Note\Source\DlgLanguage.cpp"
+"C:\tmp\A Note\Source\DlgOptionsAlarm.cpp"
+"C:\tmp\A Note\Source\DlgOptionsBehaviour.cpp"
+"C:\tmp\A Note\Source\DlgOptionsDatabase.cpp"
+"C:\tmp\A Note\Source\DlgOptionsFont.cpp"
+"C:\tmp\A Note\Source\DlgOptionsGeneral.cpp"
+"C:\tmp\A Note\Source\DlgOptionsHotKey.cpp"
+"C:\tmp\A Note\Source\DlgOptionsLanguage.cpp"
+"C:\tmp\A Note\Source\DlgOptionsLooks.cpp"
+"C:\tmp\A Note\Source\DlgOptionsNewNote.cpp"
+"C:\tmp\A Note\Source\DlgOptionsRecycleBin.cpp"
+"C:\tmp\A Note\Source\DlgOptionsServer.cpp"
+"C:\tmp\A Note\Source\DlgOptionsToolbar.cpp"
+"C:\tmp\A Note\Source\DlgOptionsTransparancy.cpp"
+"C:\tmp\A Note\Source\DlgRecycleBin.cpp"
+"C:\tmp\A Note\Source\DlgRecycleBinHelp.cpp"
+"C:\tmp\A Note\Source\DlgSetAlarm.cpp"
+"C:\tmp\A Note\Source\DlgSetTitle.cpp"
+"C:\tmp\A Note\Source\DlgSnooze.cpp"
+"C:\tmp\A Note\Source\DlgUserInformation.cpp"
+"C:\tmp\A Note\Source\DlgUseUserInformation.cpp"
+"C:\tmp\A Note\Source\ErrorLog.cpp"
+"C:\tmp\A Note\Source\HyperLink.cpp"
+"C:\tmp\A Note\Source\MainFrm.cpp"
+"C:\tmp\A Note\Source\Note.cpp"
+"C:\tmp\A Note\Source\RecycleBin.cpp"
+"C:\tmp\A Note\Source\SystemTray.cpp"
+"C:\tmp\A Note\Source\Translate.cpp"
+"C:\tmp\A Note\Source\Xml.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ttmca\LOCALS~1\Temp\RSP396.tmp" 
+Creating temporary file "C:\DOCUME~1\ttmca\LOCALS~1\Temp\RSP397.tmp" with contents
+[
+Version.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/A Note.pdb" /debug /machine:I386 /out:"Debug/A Note.exe" /pdbtype:sept 
+".\Debug\A Note.obj"
+".\Debug\AutoRichEditCtrl.obj"
+".\Debug\Base64.obj"
+".\Debug\BCMenu.obj"
+".\Debug\BtnST.obj"
+".\Debug\ChildView.obj"
+".\Debug\CMapi.obj"
+".\Debug\DlgCreateNewLanguage.obj"
+".\Debug\DlgDeleteInformation.obj"
+".\Debug\DlgGuide.obj"
+".\Debug\DlgLanguage.obj"
+".\Debug\DlgOptionsAlarm.obj"
+".\Debug\DlgOptionsBehaviour.obj"
+".\Debug\DlgOptionsDatabase.obj"
+".\Debug\DlgOptionsFont.obj"
+".\Debug\DlgOptionsGeneral.obj"
+".\Debug\DlgOptionsHotKey.obj"
+".\Debug\DlgOptionsLanguage.obj"
+".\Debug\DlgOptionsLooks.obj"
+".\Debug\DlgOptionsNewNote.obj"
+".\Debug\DlgOptionsRecycleBin.obj"
+".\Debug\DlgOptionsServer.obj"
+".\Debug\DlgOptionsToolbar.obj"
+".\Debug\DlgOptionsTransparancy.obj"
+".\Debug\DlgRecycleBin.obj"
+".\Debug\DlgRecycleBinHelp.obj"
+".\Debug\DlgSetAlarm.obj"
+".\Debug\DlgSetTitle.obj"
+".\Debug\DlgSnooze.obj"
+".\Debug\DlgUserInformation.obj"
+".\Debug\DlgUseUserInformation.obj"
+".\Debug\ErrorLog.obj"
+".\Debug\HyperLink.obj"
+".\Debug\LayeredWindowHelperST.obj"
+".\Debug\MainFrm.obj"
+".\Debug\Note.obj"
+".\Debug\Picture.obj"
+".\Debug\RecycleBin.obj"
+".\Debug\SAPrefsDialog.obj"
+".\Debug\SAPrefsStatic.obj"
+".\Debug\SAPrefsSubDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\SystemTray.obj"
+".\Debug\Translate.obj"
+".\Debug\Xml.obj"
+".\Debug\A Note.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ttmca\LOCALS~1\Temp\RSP397.tmp"
+<h3>Output Window</h3>
+Compiling...
+A Note.cpp
+Generating Code...
+Skipping... (no relevant changes detected)
+AutoRichEditCtrl.cpp
+Base64.cpp
+ChildView.cpp
+DlgCreateNewLanguage.cpp
+DlgDeleteInformation.cpp
+DlgGuide.cpp
+DlgLanguage.cpp
+DlgOptionsAlarm.cpp
+DlgOptionsBehaviour.cpp
+DlgOptionsDatabase.cpp
+DlgOptionsFont.cpp
+DlgOptionsGeneral.cpp
+DlgOptionsHotKey.cpp
+DlgOptionsLanguage.cpp
+DlgOptionsLooks.cpp
+DlgOptionsNewNote.cpp
+DlgOptionsRecycleBin.cpp
+DlgOptionsServer.cpp
+DlgOptionsToolbar.cpp
+DlgOptionsTransparancy.cpp
+DlgRecycleBin.cpp
+DlgRecycleBinHelp.cpp
+DlgSetAlarm.cpp
+DlgSetTitle.cpp
+DlgSnooze.cpp
+DlgUserInformation.cpp
+DlgUseUserInformation.cpp
+ErrorLog.cpp
+HyperLink.cpp
+MainFrm.cpp
+Note.cpp
+RecycleBin.cpp
+SystemTray.cpp
+Translate.cpp
+Xml.cpp
+Linking...
+Creating temporary file "C:\DOCUME~1\ttmca\LOCALS~1\Temp\RSP398.tmp" with contents
+[
+/nologo /o"Debug/A Note.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\A Note.sbr"
+".\Debug\AutoRichEditCtrl.sbr"
+".\Debug\Base64.sbr"
+".\Debug\BCMenu.sbr"
+".\Debug\BtnST.sbr"
+".\Debug\ChildView.sbr"
+".\Debug\CMapi.sbr"
+".\Debug\DlgCreateNewLanguage.sbr"
+".\Debug\DlgDeleteInformation.sbr"
+".\Debug\DlgGuide.sbr"
+".\Debug\DlgLanguage.sbr"
+".\Debug\DlgOptionsAlarm.sbr"
+".\Debug\DlgOptionsBehaviour.sbr"
+".\Debug\DlgOptionsDatabase.sbr"
+".\Debug\DlgOptionsFont.sbr"
+".\Debug\DlgOptionsGeneral.sbr"
+".\Debug\DlgOptionsHotKey.sbr"
+".\Debug\DlgOptionsLanguage.sbr"
+".\Debug\DlgOptionsLooks.sbr"
+".\Debug\DlgOptionsNewNote.sbr"
+".\Debug\DlgOptionsRecycleBin.sbr"
+".\Debug\DlgOptionsServer.sbr"
+".\Debug\DlgOptionsToolbar.sbr"
+".\Debug\DlgOptionsTransparancy.sbr"
+".\Debug\DlgRecycleBin.sbr"
+".\Debug\DlgRecycleBinHelp.sbr"
+".\Debug\DlgSetAlarm.sbr"
+".\Debug\DlgSetTitle.sbr"
+".\Debug\DlgSnooze.sbr"
+".\Debug\DlgUserInformation.sbr"
+".\Debug\DlgUseUserInformation.sbr"
+".\Debug\ErrorLog.sbr"
+".\Debug\HyperLink.sbr"
+".\Debug\LayeredWindowHelperST.sbr"
+".\Debug\MainFrm.sbr"
+".\Debug\Note.sbr"
+".\Debug\Picture.sbr"
+".\Debug\RecycleBin.sbr"
+".\Debug\SAPrefsDialog.sbr"
+".\Debug\SAPrefsStatic.sbr"
+".\Debug\SAPrefsSubDlg.sbr"
+".\Debug\SystemTray.sbr"
+".\Debug\Translate.sbr"
+".\Debug\Xml.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\ttmca\LOCALS~1\Temp\RSP398.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+A Note.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

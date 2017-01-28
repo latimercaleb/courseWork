@@ -1,0 +1,23 @@
+﻿Build started 1/16/2017 1:13:25 AM.
+     1>Project "C:\Users\OSO\Desktop\LatimerCaleb\task3\Build_error_example_-_ANote\ANote\Source\A Note.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Debug\A Note.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         A Note.vcxproj -> C:\Users\OSO\Desktop\LatimerCaleb\task3\Build_error_example_-_ANote\ANote\Source\.\Debug\A Note.exe
+         A Note.vcxproj -> .\Debug/A Note.pdb (Full PDB)
+       BscMake:
+         All outputs are up-to-date.
+       FinalizeBuildStatus:
+         Deleting file ".\Debug\A Note.tlog\unsuccessfulbuild".
+         Touching ".\Debug\A Note.tlog\A Note.lastbuildstate".
+     1>Done Building Project "C:\Users\OSO\Desktop\LatimerCaleb\task3\Build_error_example_-_ANote\ANote\Source\A Note.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.40

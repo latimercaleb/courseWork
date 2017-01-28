@@ -1,0 +1,20 @@
+﻿Build started 7/3/2016 7:13:14 PM.
+     1>Project "C:\Users\OSO\Desktop\Lab6\Lab6\Lab6\Lab6.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Lab6.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         E:\Prog Tools\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt test6.cpp
+         test6.cpp
+       Link:
+         E:\Prog Tools\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\OSO\Desktop\Lab6\Lab6\Debug\Lab6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\OSO\Desktop\Lab6\Lab6\Debug\Lab6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\OSO\Desktop\Lab6\Lab6\Debug\Lab6.lib" /MACHINE:X86 /SAFESEH Debug\StackArray.obj
+         Debug\StackLinked.obj
+         Debug\test6.obj
+         Lab6.vcxproj -> C:\Users\OSO\Desktop\Lab6\Lab6\Debug\Lab6.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\Lab6.tlog\unsuccessfulbuild".
+         Touching "Debug\Lab6.tlog\Lab6.lastbuildstate".
+     1>Done Building Project "C:\Users\OSO\Desktop\Lab6\Lab6\Lab6\Lab6.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.79

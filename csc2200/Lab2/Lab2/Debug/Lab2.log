@@ -1,0 +1,6 @@
+﻿  Date.cpp
+c:\users\oso\desktop\lab2\lab2\date.cpp(8): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(505): note: see declaration of 'localtime'
+c:\users\oso\desktop\lab2\lab2\date.cpp(81): warning C4551: function call missing argument list
+c:\users\oso\desktop\lab2\lab2\date.cpp(117): warning C4715: 'Date::daysInMonth': not all control paths return a value
+  Lab2.vcxproj -> C:\Users\OSO\Desktop\Lab2\Debug\Lab2.exe

@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "A Note", "A Note.vcproj", "{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		UNICODE Debug|Win32 = UNICODE Debug|Win32
+		UNICODE Release|Win32 = UNICODE Release|Win32
+		UNICODE With Help|Win32 = UNICODE With Help|Win32
+		With Help|Win32 = With Help|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}.Debug|Win32.Build.0 = Debug|Win32
+		{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}.Release|Win32.ActiveCfg = Release|Win32
+		{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}.Release|Win32.Build.0 = Release|Win32
+		{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}.UNICODE Debug|Win32.ActiveCfg = UNICODE Debug|Win32
+		{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}.UNICODE Debug|Win32.Build.0 = UNICODE Debug|Win32
+		{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}.UNICODE Release|Win32.ActiveCfg = UNICODE Release|Win32
+		{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}.UNICODE Release|Win32.Build.0 = UNICODE Release|Win32
+		{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}.UNICODE With Help|Win32.ActiveCfg = UNICODE With Help|Win32
+		{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}.UNICODE With Help|Win32.Build.0 = UNICODE With Help|Win32
+		{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}.With Help|Win32.ActiveCfg = With Help|Win32
+		{F60DA37C-CDD0-4B9D-8E7C-9F32A727BA76}.With Help|Win32.Build.0 = With Help|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
