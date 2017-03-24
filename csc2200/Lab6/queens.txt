@@ -1,0 +1,5 @@
+
+This queens.cpp (instructor solution) and queens.cs (student starter kit)
+have not yet been added to the instructor and student file kits. They 
+should be so by the end of March 2008.
+

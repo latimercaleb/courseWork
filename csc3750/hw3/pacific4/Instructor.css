@@ -1,0 +1,91 @@
+/* TA's CSS */
+body {
+background-color: #ffffff;
+background-image: url(background.jpg);
+color: #666666;
+font-family: Arial;
+}
+
+h1 {
+background-color: #000033;
+color: #ffffff;
+font-family: Georgia;
+line-height: 200%;
+background-image: url(sunset.jpg);
+background-repeat: no-repeat;
+background-position: right;
+height: 72px;
+margin-bottom: 0px;
+padding-left: 20px;
+}
+
+h2 {
+color: #3399CC;
+font-family: Georgia;
+}
+
+h3 {
+color: #000033;
+}
+
+nav {
+background-color: #90C7E3;
+color: #666666;
+font-weight: bold;
+font-family: Arial;
+padding: 5px;
+}
+
+nav a   {
+text-decoration: none;
+}
+
+dt {
+color: #000033;
+font-weight: bold;
+}
+
+footer {
+font-size: .70em;
+text-align: center;
+font-style: italic;
+padding: 10px;
+}
+
+.resort {
+color: #000033;
+font-size: 1.2em;
+}
+
+#wrapper {
+        margin-left: auto;
+margin-right: auto;
+min-width: 700px;
+max-width: 1024px;
+background-color: #ffffff;
+width: 80%;
+box-shadow: 5 5px;
+}
+
+#homehero {
+height: 300px;
+background-image: url(coast.jpg);
+background-size: 100% 100%;
+}
+
+#yurthero {
+height: 300px;
+background-image: url(yurt.jpg);
+background-size: 100% 100%;
+}
+
+#trailhero {
+height: 300px;
+background-image: url(trail.jpg);
+background-size: 100% 100%;
+}
+
+#main {
+padding-right: 20px;
+padding-left: 20px;
+}

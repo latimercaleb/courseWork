@@ -1,0 +1,13 @@
+To overload The Assignment operator, the signature must be the following:
+
+const Text & Text::operator= ( const Text &other )
+{
+}
+
+You should also change it in the Text.h file.
+
+Reason:
+The overloaded assignment should be able to support assignment chaining like a=b=c;
+If the method returns nothing the compiler complains about assignment chaining.
+You want you custom class works like primitive type and since assignment chaining is supported by primitive types
+Text class should support it too.

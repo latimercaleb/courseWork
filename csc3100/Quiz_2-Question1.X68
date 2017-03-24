@@ -1,0 +1,111 @@
+*-----------------------------------------------------------
+* Title      : Quiz 2 Question 1
+* Written by : Caleb Latimer
+* Date       : 12/4/2016
+* Description: Array, max and min 
+*-----------------------------------------------------------
+    ORG    $1000
+START:                  ; first instruction of program
+; MAX = D7 MIN = D6 COUNTER = D5
+* Put program code here
+    MOVE #0,D5 ; STARTS COUNTER AT 0
+    MOVE #100,D6 ; STARTS THE MIN AT 100, SINCE IT MUST BE LARGER THAN THE LARGEST VALUE IN THE ARRAY 
+    MOVE #0,D7 ; STARTS THE MAX AT 0 
+    
+    LEA ARRMES,A1 ; PROMPT FOR ARRAY OUTPUT
+    MOVE.B	#14,D0
+	TRAP	#15
+	
+	LEA ARR,A2 ; LOADS THE ARRAY INTO AN ADDRESS
+	LEA SPACE, A1 ; LOADS A SPACE AFTER EACH NUMBER 
+	
+PRINT
+	MOVE.B (A2)+,D1 ; POST INCREMENT TO MOVE TO NEXT NUMBER
+	MOVE #3,D0
+	TRAP #15
+	
+	MOVE.B	#14,D0 ; DISPLAYS THE SPACE THAT WE ALREADY LOADED OUTSIDE THE LOOP
+	TRAP	#15
+	
+	ADD.B #1,D5 ; INCREMENT COUNTER
+	
+	CMP #5,D5 ; COMPARE 5 == D5? 
+	BNE PRINT ; IF NOT PRINT THE REST OF THE ARRAY 
+	BEQ MAX ; IF SO MOVE ON TO MAX COMPUTATION 
+	
+SCANMAX 
+    MOVE.B (A2)+,D1 ; ITERATE THROUGH ARRAY COMPARING WITH D7 FOR THE LARGER NUMBER
+    CMP D7,D1
+    BGT NEWMAX
+    BLE NEXTMAX
+    
+NEWMAX    
+    MOVE.B D1,D7 ; IF THERE IS A NEW MAX NUMBER PUT IT IN D7 
+    BRA NEXTMAX
+    
+NEXTMAX 
+    ADD.B #1,D5 ; EITHER WAY ITERATE THE COUNTER AND OUTPUT THE RESULT ONCE WE HAVE FINISHED 
+    CMP #5,D5
+    BNE SCANMAX 
+    BEQ MAXRESULT 
+	
+MAX 
+    LEA MAXMES,A1 ; OUTPUT MAX MESSAGE 
+    MOVE.B #14,D0
+    TRAP #15 
+    
+    LEA ARR,A2 ; RELOAD THE ARRAY 
+    CLR.L D5 ; CLEAR THE COUNTER
+    BRA SCANMAX
+    
+MAXRESULT    
+    MOVE.B D7,D1 ; OUTPUT MAX AND MOVE THE MIN 
+    MOVE #3,D0
+	TRAP #15
+	BRA MIN 
+	
+SCANMIN  
+    MOVE.B (A2)+,D1 ; ITERATE THROUGH ARRAY COMPARING WITH D6 FOR THE SMALLER NUMBER
+    CMP D6,D1
+    BLT NEWMIN
+    BGE NEXTMIN
+NEWMIN    
+    MOVE.B D1,D6 ; IF THERE IS A NEW MIN NUMBER PUT IT IN D6 
+    BRA NEXTMIN
+    
+NEXTMIN
+    ADD.B #1,D5 ; EITHER WAY ITERATE THE COUNTER AND OUTPUT THE RESULT ONCE WE HAVE FINISHED 
+    CMP #5,D5
+    BNE SCANMIN 
+    BEQ MINRESULT
+	
+MIN 
+    LEA MINMES,A1 ; LOAD MIN MESSAGE PROMPT
+    MOVE.B #14,D0
+    TRAP #15 
+    
+    LEA ARR,A2 ; RELOAD THE ARRAY 
+    CLR.L D5 ; CLEAR THE COUNTER
+    BRA SCANMIN 
+    
+MINRESULT    
+    MOVE.B D6,D1 ; OUTPUT MIN AND END
+    MOVE #3,D0
+	TRAP #15
+
+    SIMHALT             ; halt simulator
+
+* Put variables and constants here
+CR	EQU	$0D
+LF	EQU	$0A
+ARR DC.B 14, 7, 1, 17, 10
+ARRMES DC.B 'This is the array: ',0
+MAXMES DC.B CR,LF,'This is the maximum: ',0
+MINMES DC.B CR,LF,'This is the minimum: ',0
+SPACE DC.B ' ',0
+    END    START        ; last line of source
+
+*~Font name~Courier New~
+*~Font size~10~
+*~Tab type~1~
+*~Tab size~4~
