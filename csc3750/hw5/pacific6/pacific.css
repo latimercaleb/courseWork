@@ -1,0 +1,114 @@
+/* pacific.css for assignment #5 by Caleb Latimer*/
+*{
+      box-sizing: border-box;
+}
+body{
+      background-color: #FFFFFF;
+      color : #666666;
+      font-family: Verdana;
+      background-image: url(images/background.jpg);
+}
+h1{
+      background-color: #000033;
+      color : #FFFFFF;
+      font-family: Georgia;
+      line-height: 200%;
+      background-image: url(images/sunset.jpg);
+      background-repeat: no-repeat;
+      padding-left: 20px;
+      height: 72px;
+      margin-bottom: 0;
+      background-position: right;
+}
+
+h2{
+      color: #3399CC;
+      font-family: Georgia;
+}
+dt{
+      color: #000033;
+      font-weight: bold;
+}
+.resort{
+      color: #000033;
+      font-size: 1.2em;
+}
+footer{
+      font-size: .70em;
+      font-style: italic;
+      text-align: center;
+      padding: 10px 10px 10px 10px;
+      background-color: #FFFFFF;
+      margin-left: 170px;
+}
+#wrapper{
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      background-color: #90C7E3;
+      min-width: 700px;
+      max-width: 1024px;
+      box-shadow: 5px 5px 5px #828282;
+}
+h3{
+      color: #000033;
+}
+main{
+      padding-left: 20px;
+      padding-right: 20px;
+      display:block;
+}
+#homehero{
+      height: 300px;
+      background-image: url(images/coast.jpg);
+      background-size: 100% 100%;
+      margin-left: 170px;
+}
+#yurthero{
+      height: 300px;
+      background-image: url(images/yurt.jpg);
+      background-size: 100% 100%;
+      margin-left: 170px;
+}
+#trailhero{
+      height: 300px;
+      background-image: url(images/trail.jpg);
+      background-size: 100% 100%;
+      margin-left: 170px;
+}
+ nav ul li a{
+      text-decoration: none;
+
+}
+nav a:link{
+      color: #000033;
+}
+nav a:visited{
+      color: #344873;
+}
+nav a:hover{
+      color: #FFFFFF;
+}
+.left-column{
+      font-weight: bold;
+      background-color: inherit;
+      float: left;
+      width: 160px;
+      padding-top: 20px 5px 0px 20px;
+      position: relative;
+}
+.left-column ul li{
+      list-style: none;
+      list-style-type: none;
+      margin: none;
+      padding-left: none;
+}
+.right-column{
+      background-color: #FFFFFF;
+      margin-left: 170px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+}
+header,nav,main,footer{
+      display: block;
+}
