@@ -1,0 +1,277 @@
+/* pacific.css for assignment #5 by Caleb Latimer*/
+*{
+  box-sizing: border-box;
+}
+body{
+      background-color: #FFFFFF;
+      color : #666666;
+      font-family: Verdana;
+      background-image: url(images/background.jpg);
+}
+h1{
+      background-color: #000033;
+      color : #FFFFFF;
+      font-family: Georgia;
+      line-height: 200%;
+      background-image: url(images/sunset.jpg);
+      background-repeat: no-repeat;
+      padding-left: 20px;
+      height: 72px;
+      margin-bottom: 0;
+      background-position: right;
+}
+h2{
+      color: #3399CC;
+      font-family: Georgia;
+}
+dt{
+      color: #000033;
+      font-weight: bold;
+}
+.resort{
+      color: #000033;
+      font-size: 1.2em;
+}
+footer{
+      font-size: .70em;
+      font-style: italic;
+      text-align: center;
+      padding: 10px 10px 10px 10px;
+      background-color: #FFFFFF;
+      margin-left: 170px;
+}
+#wrapper{
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      background-color: #90C7E3;
+      min-width: 700px;
+      max-width: 1024px;
+      box-shadow: 5px 5px 5px #828282;
+}
+h3{
+      color: #000033;
+}
+main{
+      padding-left: 20px;
+      padding-right: 20px;
+      display:block;
+}
+#homehero{
+      height: 300px;
+      background-image: url(images/coast.jpg);
+      background-size: 100% 100%;
+      margin-left: 170px;
+}
+#yurthero{
+      height: 300px;
+      background-image: url(images/yurt.jpg);
+      background-size: 100% 100%;
+      margin-left: 170px;
+}
+#trailhero{
+      height: 300px;
+      background-image: url(images/trail.jpg);
+      background-size: 100% 100%;
+      margin-left: 170px;
+}
+ nav ul li a{
+      text-decoration: none;
+}
+nav a:link{
+      color: #000033;
+}
+nav a:visited{
+      color: #344873;
+}
+nav a:hover{
+      color: #FFFFFF;
+}
+.left-column{
+      font-weight: bold;
+      background-color: inherit;
+      float: left;
+      width: 160px;
+      padding-top: 20px;
+      padding-right: 5px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      position: relative;
+}
+.left-column ul li{
+      list-style: none;
+      list-style-type: none;
+      margin: 0;
+      padding-left: 0;
+}
+.right-column{
+      background-color: #FFFFFF;
+      margin-left: 170px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+}
+header,nav,main,footer{
+      display: block;
+}
+#mobile{
+  display: none;
+}
+#desktop{
+  display: inline;
+}
+/* Table information */
+table{
+  margin-left: auto; /* Adjusting margins to force centering */
+  margin-right: auto;
+  border: 1px solid #3399CC;
+  border-collapse: collapse;
+  width: 90%;
+}
+td,th{
+  padding: 5px;
+  border: 1px solid #3399CC;
+}
+td{
+  text-align: center;
+}
+.text{
+  text-align: left;
+}
+/* Psudeo selector */
+tr:nth-of-type(even){
+  background-color: #F5FAFC;
+}
+
+/* CSS media queries below */
+@media only screen and (max-width: 1024px){
+  body{
+    margin: 0;
+    padding: 0;
+    background-image: none;
+}
+  #wrapper{
+    width:auto;
+    min-width: 0;
+    margin:0;
+    box-shadow: none;
+}
+  h1{
+    margin: 0;
+}
+nav ul{
+  padding-left: 0px;
+}
+  nav{
+    float:none;
+    width:auto;
+    padding: 0.5em;
+}
+  nav li{
+    display:inline-block;
+}
+  nav a{
+    padding: 1em;
+}
+  main{
+    padding: 1em;
+    margin-left: 0;
+    font-size: 90%;
+}
+  footer{
+    margin:0;
+  }
+  #homehero{
+    margin-left: 0;
+  }
+  #yurthero{
+    margin-left: 0;
+  }
+  #trailhero{
+    margin-left: 0;
+  }
+  .left-column{
+    font-weight: bold;
+    background-color: inherit;
+    float: none;
+    padding-top: 0px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    width: 100%;
+  }
+  .right-column{
+    background-color: #FFFFFF;
+    margin-left: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
+
+@media only all and (max-width: 768px){
+  h1{
+    height: 100%;
+    font-size: 1.5em;
+    padding-left: 0.3em;
+  }
+  nav{
+    padding: 0;
+  }
+  nav a{
+    display: block;
+    padding:0.2em;
+    font-size:1.3em;
+  }
+  nav ul{
+    margin: 0;
+    padding: 0;
+  }
+  nav li{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: solid;
+    border-width: 1px;
+    border-color: #330000;
+  }
+  main{
+    padding-top: 0.1em;
+    padding-right: 0.6em;
+    padding-bottom: 0.1em;
+    padding-left: 0.4em;
+  }
+  #homehero{
+    display: none;
+  }
+  #yurthero{
+    display:none;
+  }
+  #trailhero{
+    display:none;
+  }
+  footer{
+    padding: 0;
+  }
+  #mobile{
+    display: inline;
+  }
+  #desktop{
+    display: none;
+  }
+  .left-column{
+    font-weight: bold;
+    background-color: inherit;
+    float: none;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    position:relative;
+    width: 100%;
+  }
+  .right-column{
+    background-color: #FFFFFF;
+    margin-left: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
