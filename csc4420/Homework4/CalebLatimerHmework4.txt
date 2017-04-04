@@ -1,0 +1,107 @@
+Written by Caleb Latimer, ej1297
+NOTE: SHOW YOUR WORK!!!
+
+1) Problem 4.10
+
+Consider the directory tree of Fig. 4-8. If /usr/jim is the working directory, what is the
+absolute path name for the file whose relative path name is ../ast/x?
+
+
+An absolute path name goes from root -> the file. So if our directory is defined as /usr/jim then our current directory is different from the directory x is in.
+The absolute path would be /usr/ast/x for the file x described in the relative path.
+
+
+2) Problem 4.13
+
+One way to use contiguous allocation of the disk and not suffer from holes is to compact the disk every time a file is removed. Since all files are contiguous, copying a file
+requires a seek and rotational delay to read the file, followed by the transfer at full
+speed. Writing the file back requires the same work. Assuming a seek time of 5 msec,
+a rotational delay of 4 msec, a transfer rate of 80 MB/sec, and an average file size of 8
+KB, how long does it take to read a file into main memory and then write it back to the
+disk at a new location? Using these numbers, how long would it take to compact half
+of a 16-GB disk?
+
+
+Contiguous storage basically stores the blocks in a linear sequence, this a powerful allocation style because it keeps track of free space easily and only needs one seek to find the first block 	of a file after that it can be read in a single operation. So by that logic:
+
+Reading a file into main memory and writing back to the disk requires both seek and rotational delays to 5 msec + 4msec = 9msec (total time of delays).
+File = 8KB = 8192b = 2^13b
+Transfer rate = 80MB = 8388608b = 2^23b
+Total transfer time = (File/Transfer rate) = 2 ^ (13 - 23) = 2 ^ -10 = 0.977msec
+
+Time = 0.977msec + 9msec = 9.977msec.
+
+Since we are reading and writing and we know writing takes the same amount of time we take time * 2 = 19.954msec
+
+Compacting the disk
+Disk size = 16GB but we are compacting half which is 8GB, which comes out to 2 ^20 or 1,048,576 bytes of files. Considering the 19.954msec that we need to read and write to the disk converted to seconds = 0.019954sec
+
+0.019954 * 2^20 = 20,923.285504 seconds for the disk. Divided by 3600 seconds that comes out to 5.812 hours to complete the compaction.
+
+3) Problem 4.14
+
+In light of the answer to the previous question, does compacting the disk ever make any sense?
+
+Yes it does because over time the disk will have space taken and space freed resulting in a combination of files and holes. In order to ensure ease in future production compacting these files so that the holes result in one solid chunk of free space to use is very beneficial. However, it is not a good idea to compact after every single file removal, that takes way too much time and limits performance.
+
+4) Problem 4.25
+
+The beginning of a free-space bitmap looks like this after the disk partition is first formatted: 1000 0000 0000 0000 (the first block is used by the root directory). The system always searches for free blocks starting at the lowest-numbered block, so after writing file A, which uses six blocks, the bitmap looks like this: 1111 1110 0000 0000.
+
+Show the bitmap after each of the following additional actions:
+
+(a) File B is written, using five blocks.
+(b) File A is deleted.
+(c) File C is written, using eight blocks.
+(d) File B is deleted.
+
+Starting 1111 1110 0000 0000
+(a) After B is written taking 5 blocks: 1111 1111 1111 0000
+(b) A is deleted so it's bits become 0: 1000 0001 1111 0000
+(c) C is written taking 8 from the lowest number: 1111 1111 1111 1100
+(d) B is deleted: 1111 1110 0000 1100
+
+5) Problem 5.14
+
+In which of the four I/O software layers is each of the following done.
+
+(a) Computing the track, sector, and head for a disk read.
+(b) Writing commands to the device registers.
+(c) Checking to see if the user is permitted to use the device.
+(d) Converting binary integers to ASCII for printing.
+
+(a) occurs in the device driver layer because the track, sector and head must be calculated by the disk itself so it is handled via drivers, (b) occurs in the device drivers layer because software communications between OS and device are handled in this layer so outputting to a device's register would be done here. (c) occurs in the device-indepedent OS layer because it deals with user authentication which is not dependant on the device itself but rather the permissions given to a user. (d) handled by user level software, the conversions are done by the program as well as the call for printing
+
+6) Problem 5.17
+
+How much cylinder skew is needed for a 7200-RPM disk with a track-to-track seek time of 1 msec? The disk has 200 sectors of 512 bytes each on each track.
+
+If we have a 7200 RPM disk then that means 120 rotations per second (7200/60). 
+A single rotation is equal to 1000/120 msec
+Since we have 200 sectors then the sector time is broken up into 200 equal parts that each making 24 total groups.
+With 1msec seek time we have a cylinder skew of 24.
+
+7) 	Problem 5.19
+
+Calculate the maximum data rate in bytes/sec for the disk described in the previous problem.
+
+In the previous problem we had a disk rotating at 7200rpm and 500 sectors of 512 bytes around the outer cylinder because of that we needed to calculate how long it took to read a sector
+7200/60 = 120rps
+60/7200 = 0.00833s or 8.33ms
+1 rotation = 8.33ms
+8.33ms / 500ms = 0.016ms or 16microsecs
+
+So it took 16 microseconds to read a sector, with 512 bytes Max = (512 * 10^6) / 16 = 32MB/s -> 32060000 B/s
+
+
+8) 	Problem 4.43
+
+Write a program that reverses the bytes of a file, so that the last byte is now first and the first byte is now last. It must work with an arbitrarily long file, but try to make it reasonably efficient.
+
+Program attached  as prog1.
+
+9) 	Problem 4.44
+
+Write a program that starts at a given directory and descends the file tree from that point recording the sizes of all the files it finds. When it is all done, it should print a histogram of the file sizes using a bin width specified as a parameter (e.g., with 1024, file sizes of 0 to 1023 go in one bin, 1024 to 2047 go in the next bin, etc.).
+
+Program attached as prog2.

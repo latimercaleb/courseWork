@@ -1,0 +1,11 @@
+2.6 
+If the cpu has 4gb of ram and the os takes up 512MB and the total processes take 256MB then the maximum wait time is 72%
+
+2.7
+Sequentially it would take 80 mins for the second job to complete
+In parallel it would take 53.3 minutes
+
+problem 3
+A process's parent process becomes the root after it's original parent terminates. However ubuntu does some weirdness where it links my orphans to user-upstart which has the id 14937 
+
+

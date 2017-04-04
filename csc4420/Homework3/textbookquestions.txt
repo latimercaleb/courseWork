@@ -1,0 +1,70 @@
+The following document contains solutions to tasks 1-7 of homework 3 and is written by Caleb Latimer
+~ej1297
+
+Problem 2.29
+The producer-consumer problem can be extended to a system with multiple producers
+and consumers that write (or read) to (from) one shared buffer. Assume that each producer and consumer runs in its own thread. Will the solution presented in Fig. 2-28,
+using semaphores, work for this system?
+
+Yes the solution can be extended so long as the semaphores ensure that only one process can access
+the shared buffer at one time.
+
+Problem 2.30
+Consider the following solution to the mutual-exclusion problem involving two processes P0 and P1. Assume that the variable turn is initialized to 0. Process P0’s code is
+presented below:
+/* Other code */
+while (turn != 0) { } /* Do nothing and wait. */
+Critical Section /* . . . */
+turn = 0;
+/* Other code */
+
+For process P1, replace 0 by 1 in above code. Determine if the solution meets all the
+required conditions for a correct mutual-exclusion solution.
+
+No, because if you change 0 to 1 then P0 is blocked out of the critical section, this however does not put P1 inside of the critical section. Meaning that P0 is blocked without a purpose so this isn't a solution
+
+Problem 2.31
+How could an operating system that can disable interrupts implement semaphores?
+
+If the command disable is given then the interrupts  are stopped. Say the semaphore has a value, if value = 0 and it's waiting add it to blocked queue.
+If value is 0 and it's a signal instead then we would need the check the blocked processes queue
+Lastly if value > 0 then it's a wait operation so decrease the semaphore by 1.
+Once everything is done re-enable the interrupts.
+
+Problem 3.7
+Using the page table of Fig. 3-9, give the physical address corresponding to each of the
+following virtual addresses:
+(a) 20
+(b) 4100
+(c) 8300
+
+A) 20 would be in virtual page 0 which maps to frame 2 which ranges from 8k - 12k so the offset for address 20 is 20 therefore it's page address is 8212.
+B) 4100 would be in virtual page 1 which maps to frame 1 which ranges from 4k - 8k so the offset is 4 and the page address is 4100
+C) 8300 would be in virtual page 2 which maps to frame 6 which ranges from 24k - 28k so the offset is 108 and the page address is 24684
+
+Problem 3.13
+If an instruction takes 1 ns and a page fault takes an additional n ns, give a formula
+for the effective instruction time if page faults occur every k instructions.
+
+My formula is the following:
+G = k+n
+Result = G/k
+
+
+Problem 3.16
+You are given the following data about a virtual memory system:
+(a)The TLB can hold 1024 entries and can be accessed in 1 clock cycle (1 nsec).
+(b) A page table entry can be found in 100 clock cycles or 100 nsec.
+(c) The average page replacement time is 6 msec.
+
+If page references are handled by the TLB 99% of the time, and only 0.01% lead to a
+page fault, what is the effective address-translation time?
+
+The address-translation time is the following:
+601.98ns
+
+Problem 3.29
+Consider the page sequence of Fig. 3-15(b). Suppose that the R bits for the pages B
+through A are 11011011, respectively. Which page will second chance remove?
+
+D

@@ -1,0 +1,35 @@
+2.6 
+If the cpu has 4gb of ram and the os takes up 512MB and the total processes take 256MB then the maximum wait time is 72%
+
+2.7
+Sequentially it would take 80 mins for the second job to complete
+In parallel it would take 53.3 minutes
+
+problem 3
+A process's parent process becomes the root after it's original parent terminates. However ubuntu does some weirdness where it links my orphans to user-upstart which has the id 14937 
+
+problem 5
+The maximum number that I was able to generate was 11886 before fork failed. 
+Ram is the following:
+*-memory                
+       description: System memory
+       physical id: 0
+       size: 3745MiB
+  *-memory UNCLAIMED
+       description: Memory controller
+       product: Intel Corporation
+       vendor: Intel Corporation
+       physical id: 1f.2
+       bus info: pci@0000:00:1f.2
+       version: 21
+       width: 32 bits
+       clock: 33MHz (30.3ns)
+       configuration: latency=0
+       resources: memory:d1224000-d1227fff
+
+
+
+Problem 6
+Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz
+
+

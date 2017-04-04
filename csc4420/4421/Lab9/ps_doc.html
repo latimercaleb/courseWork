@@ -1,0 +1,1205 @@
+<HEAD>
+<TITLE>Using the UTSA Process Scheduling Simulator</TITLE>
+</HEAD>
+<BODY>
+<H1> Using the Process Scheduling Simulator</H1>
+
+This document was last modified on January 1, 2007 to reflect changes made
+to version 1.087.
+<p>
+
+<hr>
+<H1>Table of Contents</H1>
+<a href="#Overview">Overview</a><br>
+<a href="#Requirements">System and User Requirements</a><br>
+<a HREF="#Starting">Starting the Simulator</a><br>
+<a HREF="#Basic Operation">Basic Operation</a><br>
+<a HREF="#Specifying an Experiment: Overview">Specifying an Experiment: Overview</a><br>
+<a HREF="#Time">Time</a><br>
+<a HREF="#Processes">Processes</a><br>
+<a HREF="#Distributions">Probability Distributions</a><br>
+<a HREF="#The Experimental Run File">Experimental Runs: An Introduction</a><br>
+<a HREF="#The Experiment File">Experiments</a><br>
+<a HREF="#Experimental Run Modifications">Experimental Run Modifications</a><br>
+<a HREF="#Scheduling Algorithms">Scheduling Algorithms Supported</a><br>
+<a HREF="#PriorityScheduling">Priority Scheduling</a><br>
+<a HREF="#Configuration">Configuration</a><br>
+<a HREF="#Using the Simulator">Detailed Operation of the Simulator</a><br>
+<a HREF="#Random Numbers">Random and Not so Random Numbers</a><br>
+<a HREF="#Selecting Data">Selecting Data to be Displayed or Graphed</a><br>
+<a HREF="#The Experimental Run File Complete">Experimental Runs: Advanced</a><br>
+<a HREF="#Context Switch">Context Switches</a><br>
+<a HREF="#Using Files">Files Used by the Simulator</a><br>
+<a HREF="#Gantt Charts">Gantt Charts</a><br>
+<a HREF="#Additional Features">Additional Features</a><br>
+<p>
+<hr>
+<p>
+<a name="Overview"></a>
+<h3>Overview</h3>
+<p>
+
+The simulator allows you to experiment with various
+process scheduling algorithms on
+a collection of processes and to compare such statistics as
+throughput and waiting time.
+<p>
+Supported algorithms include First-Come/First-Served, Shortest Job First
+(actually shortest remaining cpu burst time first), and Round Robin.
+The CPU and I/O bursts of the processes are described by probability
+distributions, but it is possible to choose the seed so that the same
+processes can be used to test different algorithms.
+<p>
+The simulator is a Java application that can be run on any platform supporting
+a modern Java runtime system.  The simulator can produce log files in
+HTML format that include tables of data as well as graphs and Gantt charts.
+<p>
+
+
+<hr>
+<p>
+<a name="Requirements"></a>
+<h3>System and User Requirements</h3>
+<p>
+System requirements:
+</p><ul><li>
+    Computer with a Java runtime environment, version 1.1 or later.<br>
+    Java 1.4.2 or later is recommended.
+    <li>The tutorial assumes that the following files have been appropriately
+        installed:<tt>
+        </tt><ul><li><tt>PS.jar
+            </tt><li><tt>Jeli.jar
+            </tt><li><tt>psconfig
+            </tt><li><tt>myrun.run
+            </tt><li><tt>myexp.exp
+            </tt><li><tt>runps.bat </tt>(for Windows) or <tt>runps</tt> for UNIX<tt>
+        </tt></ul>
+</ul>
+<p>
+User requirements:
+</p><ul><li>Familiarity with running a program in a command line environment
+    <li>Some knowledge of CPU scheduling and the algorithms FCFS, SJF, and
+             RR
+        </ul>
+</ul>
+ 
+If you are only interested in this simulator, you can download a zip file
+<a href="http://vip.cs.utsa.edu/simulators/zipfiles/ps.zip">ps.zip</a>
+that contains all of the files that you need.
+<p>
+ 
+<b>Running in a non-Windows environment:</b><br>
+If you installed the simulator by copying the files from a CD, the
+scripts may not have the correct permissions to run.  The <tt>convert</tt>
+and <tt>runps</tt> files should be executable.<br>
+The ASCII files distributed with this distribution are in the Windows format
+in which lines end in a carriage return followed by a line feed.
+If you are running under UNIX, Linux, or Mac OSX, it
+may be more convenient to have the carriage returns removed.
+You can remove all of the carriage returns from these files by executing the
+<tt>convert</tt> script.
+<p>
+ 
+<hr>
+<a name="Starting"></a>
+<h3>Starting the Simulator</h3>
+If you are running from an image of the simulator CD, start in the
+<tt>ps</tt> subdirectory of the <tt>run</tt> directory.  If you unzipped
+the <b>PS.zip</b> file in a single directory, start in that directory.
+In either case, you can start the simulator from a command window by
+executing typing <tt>runps</tt>.  In a Windows environment you can
+also just click on the file <tt>runps.bat</tt>.
+<p>
+If you do a custom installation, you can put the jar files anywhere you
+want.  Modify the <tt>runps.bat</tt> (Windows) or <tt>runps</tt>
+(Unix, Linux, Mac OSX) file so that the <tt>JARDIR1</tt> or <tt>JARDIR2</tt>
+variable points to the location of the jar files.
+<p>
+If the simulator does not start, make sure you have the Java runtime
+executables in your path.  In a command window, execute:<br>
+<tt>java -version</tt><br>
+and make sure this displays a version later than 1.0.
+<p>
+ 
+
+
+
+
+<p>
+<hr>
+<a name="Basic Operation"></a>
+<h3>Basic Operation</h3>
+
+The basic steps in doing a simulation are
+<UL>
+<LI> Create a configuration file describing the basic properties of the
+     simulator
+<LI> Create an experiment which consists of a number of experimental runs
+<LI> Run the simulator on this experiment
+<LI> Log the results
+</UL>
+
+The main <a href="#Configuration">configuration file</a> contains information
+about the location of the experiments and where to put the 
+output files.
+<p>
+ 
+An experimental run consists of a scheduling algorithm and a collection
+of processes to be run under that algorithm.  An experiment consists
+of a number of experimental runs which are to be compared and analyzed.
+The simulator organizes the input information in order to make it simple
+to do experiments in which one or more parameters is varied.
+<p>
+
+To perform an experiment, you must create two files.  One file
+(the run file) contains information about the parameters for the first run.
+The other file (the experiment file) contains a list of runs
+to be made and the parameters that vary between runs.
+The files contain ASCII text so that you can create them directly with a
+<a href="#Specifying an Experiment: Overview">text editor</a>.
+The standard distribution contains sample files.
+<p>
+ 
+After the experiment has been run by the simulator, you can produce tables
+or graphs of various statistics such as average waiting time and throughput.
+Information about the experiment including the specification of the processes,
+the statistics and graphs of the experimental results
+are stored in a log file in 
+HTML format suitable for viewing from a browser.<p>
+
+<p>
+The main simulator window is shown in Figure 1.
+<p>
+
+<hr>
+<p>
+<center>
+<IMG SRC="files/Simulator_1_086.gif" WIDTH=602 HEIGHT=444>
+<p> Figure 1: The main simulator window.
+</center>
+<p>
+<hr>
+<p>
+
+The yellow subwindow in the upper left corner labeled <b>History</b>
+shows the initial configuration read in from the 
+<A href="#Configuration">configuration files.</a>  
+There are three columns of buttons at the bottom of the main window.
+The leftmost column of buttons allows you to choose the experiment
+to run and to run it.  Pushing the top button in this column advances
+through the available experiments.  Pushing the next button allows you to
+select which runs of the experiment to do.   Pushing the large
+<b>Run Experiment</b>, runs the chosen experiment.<p>
+
+The second column of buttons controls the log file.
+The top button allows you to open the log file.  When the log file is opened,
+the button
+is changed to a <b>Close Log</b> button.
+As runs are made they are logged in the log file and statistics about the run
+are saved.
+Pushing the <b>Log All Table Data</b> button puts
+two tables of statistics in the 
+log file.  The tables contains entries for all 
+<a href="#Selecting Specific Runs">selected runs.</a>
+All runs are selected by default.  A sample set of tables is shown in Figure 2.
+<p>
+The first table contains information about average CPU utilization, throughput,
+turnaround time, and waiting time for each run.  The second table contains
+more detailed information about the turnaround time and waiting time,
+including the average, the minimum, maximum, and standard deviation
+for each.
+<p>This second column of buttons also has a button for drawing Gantt Charts.
+See <a href="#Gantt Charts">Gantt Charts.</a>
+
+<p>
+The third column of buttons controls the creation of graphs and tables.
+At the top are two buttons.  The one on the left labeled
+<b>Graph Type: Waiting</b> will cycle through the types of graphs that
+can be drawn.  Draw the selected type of graph by pushing the <b>Draw</b>
+button to the right.
+The entry <b>Graph: Waiting</b> means that a histogram containing information
+on the waiting time for the processes of each run is to be produced.
+Each run is displayed in a different color, and
+the distribution of waiting times
+is shown as a bar graph.  The quantity graphed is the waiting time which is
+the time spent in the ready queue.
+Pushing the <b>Draw</b> button pops up a window containing the graph.
+This window contains a <b>Log</b> button that causes the graph to be inserted
+in the log file.  The sample graph shown in Figure 3
+contains waiting time results for an experiment with two runs, one for FCFS and
+one for SJF.
+<p>
+A more complete explanation can be found in the section 
+<a href="#Using the Simulator">Detailed Operation of the Simulator</a>.
+<hr>
+<center><TABLE Border=1>
+<TR>
+<TD COLSPAN=7></TD><TD Align=center COLSPAN=2>Entries</TD><TD align=center COLSPAN=2>Average Time</TD></TR><TR>
+<TD Align=center>Description</TD>
+<TD Align=right>Algorithm</TD>
+<TD Align=right>Time</TD>
+<TD Align=right>Processes</TD>
+<TD Align=right>Finished</TD>
+<TD Align=right>CPU Utilization</TD>
+<TD Align=right>Throughput</TD>
+<TD Align=right>CPU</TD>
+<TD Align=right>I/O</TD>
+<TD Align=right>CPU</TD>
+<TD Align=right>I/O</TD>
+</TR>    
+
+<TD Align=center>myrun_1</td>
+<TD Align=right>FCFS</TD>
+<TD Align=right>   257.05</TD>
+<TD Align=right>       30</TD>
+<TD Align=right>       30</TD>
+<TD Align=right>   .96104</TD>
+<TD Align=right>  .116711</TD>
+<TD Align=right>90</TD>
+<TD Align=right>60</TD>
+<TD Align=right>     2.74</TD>
+<TD Align=right>    15.20</TD>
+</TR>
+ 
+<TD Align=center>myrun_2</td>
+<TD Align=right>SJF</TD>
+<TD Align=right>   256.90</TD>
+<TD Align=right>       30</TD>
+<TD Align=right>       30</TD>
+<TD Align=right>   .96158</TD>
+<TD Align=right>  .116777</TD>
+<TD Align=right>90</TD>
+<TD Align=right>60</TD>
+<TD Align=right>     2.74</TD>
+<TD Align=right>    15.20</TD>
+</TR>
+ 
+</TR></TABLE></center>
+<p>
+<br>
+<center><TABLE Border=1>
+<TR>
+<TD Align=center></TD>
+<TD Align=right></TD>
+<TD Align=center COLSPAN=4>Turnaround Time</TD>
+<TD Align=center COLSPAN=4>Waiting Time</TD>
+</TR><TR>
+<TD Align=center>Description</TD>
+<TD Align=right>Algorithm</TD>
+<TD Align=right>Average</TD>
+<TD Align=right>Minimum</TD>
+<TD Align=right>Maximum</TD>
+<TD Align=right>SD</TD>
+<TD Align=right>Average</TD>
+<TD Align=right>Minimum</TD>
+<TD Align=right>Maximum</TD>
+<TD Align=right>SD</TD></TR>
+ 
+<TD Align=center>myrun_1</td>
+<TD Align=right>FCFS</TD>
+<TD Align=right>   215.05</TD>
+<TD Align=right>   169.60</TD>
+<TD Align=right>   257.05</TD>
+<TD Align=right>    31.45</TD>
+<TD Align=right>   176.41</TD>
+<TD Align=right>   138.82</TD>
+<TD Align=right>   202.24</TD>
+<TD Align=right>      .66</TD>
+</TR>
+ 
+<TD Align=center>myrun_2</td>
+<TD Align=right>SJF</TD>
+<TD Align=right>   124.87</TD>
+<TD Align=right>    62.00</TD>
+<TD Align=right>   256.90</TD>
+<TD Align=right>    62.17</TD>
+<TD Align=right>    86.23</TD>
+<TD Align=right>    16.69</TD>
+<TD Align=right>   229.82</TD>
+<TD Align=right>     2.37</TD>
+</TR>
+ 
+</TR></TABLE>
+<p>
+Figure 2: Two tables of data created by the simulator when the 
+<b>Log All Table Data</b> button is pushed.
+</center>
+<hr>
+<p>
+
+<p>
+<center>
+<IMG SRC="files/SimGraph_1_085.gif" WIDTH=400 HEIGHT=350>
+<p>
+Figure 3: A graph created by the simulator when <b>Graph: Waiting</b>
+is selected and the <b>Draw Graph</b> button is pushed.
+</center>
+
+<p>
+<hr>
+<a name="Specifying an Experiment: Overview"></a>
+<h3>Specifying an Experiment: Overview</h3>
+An experiment is specified by two files.
+Each file has a name consisting of a base name
+and an extension.  The files are:
+<UL>
+<LI>The <a href="#The Experiment File">experiment file</a> with extension
+    <b>.exp</b> specifies a number of experimental runs.  
+    Each run is specified by a base name and a possible list of modifications.
+<LI>The <a href="#The Experimental Run File">experimental run file</a>, which
+    is also called the run file for short,
+    has the extension <b>.run</b> and contains information about
+    the scheduling algorithm to use, the processes to run, and when the
+    processes arrive.
+</UL>
+
+<p>
+<hr>
+<a name="Time"></a>
+<h3>Time</h3>
+The simulator uses a virtual time which is represented by a floating point
+value of unspecified units.  When the simulator is started, the time is
+set to 0.0.  The simulator is event driven, and events that occur at the 
+same time may occur in any order.
+
+<p>
+<hr>
+<a name="Processes"></a>
+<h3>Processes</h3>
+A process is specified by the following information:
+<UL>
+<LI> Arrival time
+<LI> Total CPU time
+<LI> CPU burst time distribution
+<LI> I/O burst time distribution
+</UL>
+
+<p>
+<hr>
+<a name="Distributions"></a>
+<h3>Probability Distributions</h3>
+Three probability distributions are supported at this time.
+When a probability distribution is specified in a file, it is represented
+by a single line of ASCII characters.  The line starts with a word indicating
+the type of distribution and is followed by either a single floating point
+number representing the mean of the distribution, or in the case of the
+uniform distribution two floating point numbers representing the left and
+right endpoints of the interval.
+<p>
+The following distributions are supported:<p>
+<UL>
+<LI>The constant distribution.  Example:<br>
+   <UL>constant 23.45</UL>
+    represents a constant distribution with constant value 23.45.
+<LI>The exponential distribution.  Example:<br>
+   <UL>exponential 23.45</UL>
+   represents the exponential distribution with mean 23.45.
+<LI>The uniform distribution.  Example:<br>
+    <UL>uniform 23.45 47.89</UL>
+    represents the uniform distribution in the interval [23.45,47.89]
+</UL>
+
+<p>
+<hr>
+<a name="The Experimental Run File"></a>
+<h3>Experimental Runs: An Introduction</h3>
+An experimental run, or just run for short, contains all of the information 
+needed to run the simulator on one collection of processes.
+An experimental run specifies a scheduling algorithm, a collection of processes,
+and when the processes arrive.  A simple format for an experimental run
+file is described here.  A more detailed discussion occurs 
+<a href="#The Experimental Run File Complete">later</a>.<p>
+The file format is as follows:
+<p>
+<b>name</b> <i>experimental_run_name</i><br>
+<b>comment </b><i>experimental_run_description</i><b></b><br>
+<b>algorithm</b> <i>algorithm_description</i><br>
+<b>numprocs</b> <i>number_of_processes</i><br>
+<b>firstarrival</b> <i>first_arrival_time</i><br>
+<b>interarrival</b> <i>interarrival_distribution</i><br>
+<b>duration</b> <i>duration_distribution</i><br>
+<b>cpuburst</b> <i>cpu_burst_distribution</i><br>
+<b>ioburst</b> <i>io_burst_distribution</i><br>
+<b>basepriority</b> <i>base_priority</i><br>
+<p>
+Here is a sample experimental run file that must be stored in the file
+<b>myrun.run</b>.<p>
+<pre>
+name myrun
+comment This is a sample experimental run file
+algorithm SJF
+numprocs 20
+firstarrival 0.0
+interarrival constant 0.0
+duration uniform 500.0 1000.0
+cpuburst constant 50.0
+ioburst constant 1.0
+basepriority 1.0
+</pre>
+This file specifies a run of 20 processes using the shortest job first
+algorithm.  The first process arrives at time 0.0. The interarrival times
+are all 0.0, so all processes arrive at the same time.
+Each process has a duration (total CPU time) chosen from a uniform distribution
+on the interval from 500 to 1000.  All processes have a constant cpu burst time
+of 50 and a small constant I/O burst time of 1.0.  
+The base priority must be present in the file, but it is currently not used by
+the simulator.
+
+<p>
+<hr>
+<a name="The Experiment File"></a>
+<h3>Experiments</h3>
+An experiment  consists of a number of experimental 
+runs that are to be compared and analyzed.  An experiment file
+specifies a number of 
+experimental runs to be made.  Aside from a name and comment as in the 
+above files, there are an arbitrary number of lines specifying experimental
+runs to be made.<p>
+
+In the simplest case, an experimental run can be specified by the name
+of the run.  In many cases, you will want to make several experimental runs
+in which almost everything is the same, except that one or more parameters
+are changed.  For example, you might want to vary the quantum used for
+the round robin scheduling algorithm but use the same set of processes.
+<p>
+The simulator allows you to do this by specifying the same experimental
+run in each case and giving a new value to one or more parameters.
+The general format for a run line in the experiment file consists of the
+word <b>run</b> followed by the name of an experimental run, followed
+by a list of modifications to that experimental run.
+<p>
+The experiment file format is as follows:
+<p>
+<b>name</b> <i>experiment_name</i><br>
+<b>comment </b><i>experiment_description</i><b></b><br>
+<b>run</b> <i>run_name</i>1<i> optional_modification_list</i>1<br>
+...<br>
+<b>run</b> <i>run_name</i>n<i> optional_modification_list</i>n<br>
+<p>
+
+<p>
+Here is an example experiment file that must be stored in the file
+<b>myexp.exp</b><p>
+<pre>
+name myexp
+comment This experiment contains 3 runs
+run myrun
+run myrun cpuburst uniform 10 90
+run myrun cpuburst exponential 50
+</pre>
+This experiment file makes three runs.  All of the runs are based on the
+run file <b>myrun.run</b> above.  In the second run the CPU burst distribution
+is changed to be uniform in the interval from 10 to 90.  In the third run
+the CPU burst is an exponential distribution with mean 50.
+<p> 
+<hr> 
+<a name="Experimental Run Modifications"></a> 
+<h3>Experimental Run Modifications</h3> 
+The run lines in an experiment file reference an experimental run.
+Often you would like to do several runs with almost the same parameters.
+<p>
+Only the simplest case is described here
+in which the modification applies to all processes in the run.
+<p>
+A modification specification is a string of tokens separated by 
+one of a small number of key words indicating which parameter is to be modified.
+The key word may be followed by parameters
+specific to the value to be modified.   For example, if the value to be
+modified is a distribution, then a distribution is specified in the format
+described under <a href="#Distributions">Probability Distributions</a>.
+The modification specifications can be in any order.
+<p>Here is a list of the key words and the appropriate parameters:
+<UL>
+<LI><b>numprocs</b>: The parameter is the number of processes to create.
+<LI><b>firstarrival</b>: The parameter is the arrival time of the first
+                        process, a floating point number.
+<LI><b>basepriority</b>: The parameter is the base priority of the processes
+                       created.  This base priority is not used unless the 
+                       simulator is using priorities.
+<LI><b>interarrival</b>: The parameter is a string representing the distribution
+                      of the interarrival times of the processes.
+<LI><b>duration</b>: The parameter is a string representing the distribution 
+                      of the total CPU time used by the processes.
+<LI><b>cpuburst</b>: The parameter is a string representing the distribution 
+                      of the CPU burst times of the processes.
+<LI><b>ioburst</b>: The parameter is a string representing the distribution 
+                      of the I/O burst times of the processes.
+<LI><b>algorithm</b>: The parameter is a string representing the scheduling
+                     algorithm to use.  See <a href="#Scheduling Algorithms">
+                     Scheduling Algorithms Supported.</a>
+<LI><b>seed</b>: The parameter is an integer representing a seed to be used 
+    to initialize the random number generator.
+    See <a href="#Random Numbers">Random and Not So Random Numbers
+    </a>.
+<LI><b>cstin</b>: The parameter is a non-negative floating point number
+    and represents the time during a context switch to move a process
+    into the CPU.
+<LI><b>cstout</b>: The parameter is a non-negative floating point number
+    and represents the time during a context switch to move a process
+    out of the CPU to another state.
+    See <a href="#ContextSwitches">Context Switches</a>.
+<LI><b>priorityoff</b>: This takes no parameter and sets the simulator to
+    not use priorities for this run.  This is the default.
+    See <a href="#ContextSwitches">Context Switches</a>.
+<LI><b>priorityon</b>: This takes no parameter and sets the simulator to
+    use non-preemptive priorities for this run.
+<LI><b>prioritypreempt</b>: This takes no parameter and sets the simulator to
+    use preemptive priorities for this run.
+<LI><b>key</b>: This takes a parameter which is the key to be used when
+    a graph of waiting time is produced.  If the key contains more than one word
+    it needs to be contained in double quotes.
+</UL>
+
+<p>
+<hr>
+<a name="Scheduling Algorithms"></a>
+<h3>Scheduling Algorithms Supported</h3>
+The following discussion assumes that priorities are off, which is the
+default.  See <a href="#PriorityScheduling">Priority Scheduling</a>
+for a discussion of using priorities.
+<UL>
+<LI><b>Round Robin (RR):</b> The user can set the quantum.
+    Processes are removed from the ready queue in the order that they arrive.
+<LI><b>First-Come/First-Served (FCFS):</b>
+     Processes are taken from the ready queue
+     in the order that they arrived.
+     Once a process is using the CPU, it stays there until
+     its CPU burst expires.
+     It then goes into the I/O waiting queue until its I/O burst expires.
+<LI><b>Shortest Job First (SJF):</b> The next process to be removed from the
+    ready queue is the one with the shortest CPU burst time.
+    If there is more than one
+    process with the smallest time, the one that arrived first is taken.
+<LI><b>Preemptive Shortest Job First (PSJF):</b>
+    The next process to be removed from the
+    ready queue is the one with the shortest CPU burst time.
+    If there is more than one
+    process with the smallest time, the one that arrived first is taken.
+    When a process becomes ready and its burst time is shorter than the remaining
+    burst time of the running process, the running process is preempted.
+<LI><b>Shortest Job First Approximation (SJFA):</b>
+    An estimate is made for the next
+    CPU burst time based on the past behavior of the process and 
+    the process with the shortest estimated burst time is used.
+    The initial estimate is 0
+    so new processes have priority.  A user-settable parameter, alpha,
+    has a value between 0 and 1.  If the last estimate was b, and the last
+    burst time was actually B, the next estimate is
+         alpha*B + (1-alpha)*b.
+</UL>
+A scheduling algorithm is specified with
+a string and a possible optional floating point parameter depending on the
+scheduling algorithm.  
+The following strings are used to specify scheduling algorithms:
+<UL>
+<LI><b>RR</b> <i>quantum</i> represents the Round Robin algorithm
+    with the given quantum.
+<LI><b>FCFS</b> represents the First-Come/First-Served algorithm.
+<LI><b>SJF</b> represents Shortest Job First scheduling.
+<LI><b>PSJF</b> represents Preemptive Shortest Job First scheduling.
+<LI><b>SJFA</b> <i>alpha</i> represents the Shortest Job First Approximation
+    using the given value of alpha.
+</UL>
+
+<p>
+<hr>
+<a name="PriorityScheduling"></a>
+<h3>Priority Scheduling</h3>
+The simulator supports the scheduling of processes with fixed priorities.
+A priority is a floating point value with larger numbers representing higher
+priorities.  By default, priorities are ignored.  The scheduler supports
+two modes of priority scheduling, preemptive and non-preemptive.
+Priority scheduling is specified by an optional line in the run file
+or an <a href="#Experimental Run Modifications">
+Experimental Run Modification</a> in the experiment file.  The key words
+are <b>prioriryoff</b>, <b>priorityon</b>, and <b>prioritypreempt</b>.
+The key  word <b>priorityon</b> corresponds to non-preemptive priority 
+scheduling and
+<b>prioritypreempt</b> corresponds to preemptive priority scheduling.
+When specified in the run file, a line containing one of these key words
+must appear after the algorithm specification.
+See
+<a href="#The Experimental Run File Complete">Experimental Runs: Advanced</a>.
+
+<p>
+<hr>
+<a name="Configuration"></a>
+<h3>Configuration</h3>
+The initial configuration of the simulator is determined by a configuration file, <b>psconfig</b> which currently can be either in the directory from which
+the HTML file was loaded, or the current directory.  The configuration file
+consists of a number of lines of ASCII text, each containing a key word
+followed by a key value.  These lines may appear in any order.
+<p>
+At this time the supported key words are:
+<UL>
+<LI><b>logdir</b>: key value is the directory that will contain the log file
+<LI><b>logfn</b>: key value is the name of the log file
+<LI><b>imagename</b>: the key value is the base name of the
+   GIF file graphs used when graphs
+   are inserted into the log file.
+<LI><b>user</b>: key value is the full name of the user that is inserted 
+                 into the log file.  
+<LI><b>portable</b>: key value is either the word "true" or the word "false"
+    (without the quotes).  If true, a portable random number generator
+    is used that allows experiments to be repeated and give exactly the 
+    same results.
+<LI><b>quiet</b>: pushing a button does not generate a sound.
+<LI><b>noquiet</b>: pushhing a button generates a click.
+<LI><b>run</b>: key value is the name of an experimental run.  A file with the
+     appropriate name must be present.
+<LI><b>exp</b>: key value is the name of an experiment.  A file with the
+     appropriate name must be present.
+</UL>
+Here is a sample <b>psconfig</b> file:
+<pre>
+logdir .
+logfn logfile.html
+quiet .
+imagename gifim
+user Local User
+portable true
+run myrun
+exp myexp
+</pre>
+<a name="Figure 4"></a>
+When the log file is opened, the simulator logs information about all of the
+available experimental runs and experiments.  Here is what might be produced
+for the above configuration.
+<hr>
+<b>Configuration File:</b><br>
+logdir .<br>
+logfn logfile.html<br>
+quiet .<br>
+imagename gifim<br>
+user Local User<br>
+portable true<br>
+run myrun<br>
+exp myexp<br>
+
+<hr>
+
+<b>Number of Run Files: 1</b><br>
+--------------------<br>
+name myrun<br>
+comment This contains two types of processes<br>
+algorithm SJF<br>
+seed 5000<br>
+numprocs 15<br>
+firstarrival 0.0<br>
+interarrival constant 0.0<br>
+duration uniform 10.0 15.0<br>
+cpuburst constant 10.0<br>
+ioburst uniform 10 20<br>
+basepriority 1.0<br>
+<br>
+numprocs 15<br>
+firstarrival 0.0<br>
+interarrival constant 0.0<br>
+duration constant 4.0<br>
+cpuburst constant 1.0<br>
+ioburst uniform 10.0 20.0<br>
+basepriority 1.0<br>
+ 
+<hr>
+ 
+ 
+<b>Number of Experiment Files: 1</b><br>
+--------------------<br>
+name myexp<br>
+comment This experiment contains 2 runs<br>
+run myrun algorithm FCFS key "FCFS"<br>
+run myrun algorithm SJF key "SJF"<br>
+ 
+<hr>
+ 
+<center><TABLE Border=1>
+<TR>
+<TD Align=center COLSPAN=5>Experimental Run Information for 1 Run
+</TR>
+<TR><TABLE Border=2>
+<TR COLSPAN=8>
+<TD Align=center COLSPAN=7>
+myrun: &nbsp&nbsp This contains two types of processes &nbsp&nbsp
+Seed: 0&nbsp&nbsp Algorithm: SJF</TD></TR>
+<TR><TD Align=center>Group</TD>
+<TD Align=center>Processes</TD>
+<TD Align=center>First Arrival</TD>
+<TD Align=center>Interarrival</TD>
+<TD Align=center>Duration</TD>
+<TD Align=center>CPU Burst</TD>
+<TD Align=center>I/O Burst</TD>
+</TR>
+<TR><TD Align=center>1</TD><TD ALign=right>15</TD><TD Align=right>0.0</TD><TD>constant        0.00</TD><TD>uniform        10.00 15.00</TD><TD>constant       10.00</TD><TD>uniform        10.00 20.00</TD></TR>
+<TR><TD Align=center>2</TD><TD ALign=right>15</TD><TD Align=right>0.0</TD><TD>constant        0.00</TD><TD>constant        4.00</TD><TD>constant        1.00</TD><TD>uniform        10.00 20.00</TD></TR>
+</TABLE></TR>
+</TR></TABLE></center>
+<p>
+ 
+<Center><TABLE Border=1>
+<TR>
+<TD Align=center COLSPAN=4>Experimental Runs For 1 Experiment
+</TR><TR>
+<TD Align=left>Experiment</TD>
+<TD ALign=center>Commentary</TD>
+<TD ALign=center>Run</TD>
+<TD ALign=center>Modifications</TD>
+</TR>
+<TR><TD Align=center>myexp</td>
+<TD Align=left>This experiment contains 2 runs</TD>
+<TD Align=left>myrun_1</TD>
+<TD Align=left>algorithm FCFS</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key FCFS</TD>
+</TR>
+<TR><TD> </td>
+<TD></TD>
+<TD Align=left>myrun_2</TD>
+<TD Align=left>algorithm SJF</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key SJF</TD>
+</TR>
+</TR></TABLE>
+ 
+<p>
+ 
+Figure 4: The description of an experiment as it might appear in the log file.
+</center>
+<p>
+<hr>
+The first table contains information about the processes to be created such as
+the number of processes, the first arrival time, the duration distribution,
+the CPU burst distribution, and the I/O burst distribution.
+<p>
+The second table describes the experiment that was done which consists of
+two runs, one using the algorithm FCFS and the other using SJF.
+<p>
+
+<hr>
+<a name="Using the Simulator"></a>
+<h3>Detailed Operation of the Simulator</h3>
+
+The process scheduling simulation shows two text areas at the top of the screen.
+Each text area has 5 buttons at the top.  The middle (and largest) button
+turns on or off the display of entries in the text area.  The button to the left
+of it (<b>Clr</b>) clears the contents of the text area and the button to the right
+(<b>Log</b>) stores the information displayed in the log file.  This button is disabled
+when the log file is closed.  The two small buttons on the left and right of the
+text area labeled &lt and &gt
+decrease and increase the size of the font used to display text
+in the text area.
+<p>
+The leftmost text area is labeled <b>History</b>. When active, it displays
+various information about the progress of the simulation.
+It also shows the results of any of the
+information buttons, some of which are located just below the other text area.
+<p>
+The rightmost text area is labeled <b>Event Log</b>.  When it is active it
+shows events are they occur.
+<p>
+Below the <b>Event Log</b> are about a dozen buttons
+which display information about processes and events of the latest run.
+There are two types of buttons.  The first type appears in a 3 by 3 grid.
+Each one contains a label with a number if parentheses.  When pushed, these
+buttons immediately display information in the <b>History</b> window.
+The number in parentheses
+approximates the number of lines of output generated.
+<p>The other buttons are below these in a 2 by 2 grid.  These display
+detailed information about a particular process. When you click
+one of the other buttons, it will prompt you for a process number.  Enter the
+number and push return to display information about that process.  The pointer
+must be inside the button when data is entered.
+<UL>
+<LI><b>Events</b>: displays all of the events in the event queue.
+<LI><b>New</b>: displays the processes that have been created but not yet arrived.
+<LI><b>Waiting</b>: displays all of the processes waiting for I/O to complete.
+<LI><b>All</b>: displays information about all processes.
+<LI><b>Ready</b>: displays information about processes in the ready queue.
+<LI><b>Finished</b>: displays information about the processes that have completed.
+<LI><b>CPU History</b>: displays a time-stamped log of processes entering and leaving the CPU.
+<LI><b>One History</b>: displays a time-stamped log of the state changes of one process.
+<LI><b>One Statistics</b>: displays various information about one process.
+<LI><b>One Bursts</b>: displays the CPU and IO bursts of one process.
+the CPU.
+</UL>
+The display appears in the <b>History</b> text area.
+<p>
+Below this is 3 columns of buttons.
+The first column is for running the simulator.
+The first button in this column shows which experiment will be run.
+Pushing this button cycles through the experiments if more than one is
+listed in the the configuration file.
+The next button by default is labeled <b>Run All</b> meaning that all runs
+of this experiment will be done.  Pushing this button cycles through the
+runs for the current experiment, allowing you to execute only that run.
+The simulator is actually run by pushing the last of these buttons, labeled
+<b>Run Experiment</b>.
+<p>
+The second column is mainly for logging the results of the simulator.
+The last column if for displaying various tables and graphs.
+These are described below.
+<p>
+
+</UL>
+<p> 
+The second column of buttons is primarily related to logging of data.
+<UL>
+<LI><b>Open Log</b>: opens the log file and enables the other logging buttons.
+     This button then changes to <b>Close Log</b>.<br>
+     <b><font color="#FF0000">Note: Closing the log and
+     reopening it erases the old log file by default
+     (but see the third button below).</font></b>
+<LI>The second button has different operations when the log is closed and when
+    it is open.<br>
+    When the log is closed:
+    the button is labeled <b>Change Log</b>,
+    and can be used to change the directory and filename of the log file.
+    <br>
+    When the log is open, the button toggles between the labels
+    <b>Start Log</b> and <b>Stop Log</b>.<br>
+    When the log is first opened, logging
+    starts and the button is labeled <b>Stop Log</b>.  Pushing this button
+    changes it to <b>Start Log</b> and stops the logging of data.
+    The log file remains open.
+<LI>The third button also has different operations when the log is closed and 
+    when it is open.<br>
+    When the log is closed, the button toggle between <b>Replace Old Log</b>
+    and <b>Append To Old Log</b>.  When the former is active, opening a
+    log file will replace one that already exists by the same name.
+    When the latter is active, log information is appended to an existing 
+    log file.
+    When this option is active, images are given longer filenames
+    to minimize the possibility of a conflict.<br>
+    When the log is open, this button is label <b>Log Comment</b>
+    and pops up a window allowing the user to enter a
+    comment in the log file.
+<LI><b>Log All Table Data</b>: creates two tables in the log file
+    containing statistics about all saved data.  Data is saved automatically
+    when an experiment is done or when the <b>Save Data</b> button is pushed,
+    but it does not appear in to log file until the <b>Log All Table Data</b>
+    is pushed.  The <b>Limit Logged Data</b>button in the next column
+    can be used to limit which data goes into the log file.
+<LI><b>Show Local Log</b>: displays the log file in a browser window.
+   This button becomes active after the log file has been opened.
+   It attempts to open a browser window containing the log file.
+   The should work correctly on most WIndows XP, Linux, Mac OSX, and
+   UNIX systems.
+</UL>
+<p>
+The third column of buttons is primarily related to tables and graphs.
+Figure 2 show a window that appears when you push the <b>Drawh</b>
+button.  Graphs can be resized and you can modify various parameters used
+to draw the graph.  You can set the number of bins as well as the minimum
+and maximum value graphed.  To change these, click the mouse in the appropriate
+button and you will be prompted for the new value.  If setting the minimum or
+maximum causes some processes to not be displayed, the number of missing
+processes is displayed in the min and max box in parentheses.
+<p>
+The <b>Change Key</b> button can be used to change the key in the graph.
+If there is more than one run displayed, pushing this button prompts for
+the index of the run to change.  The index numbers appear with the keys
+on the graph when this occurs.  After choosing a run, enter the new key.
+In a similar way, the <b>Color</b> button allows you to change the color
+used to graph a particular run.  After choosing the index, click on the color
+you want to use.
+<UL>
+<LI><b>Graph: Waiting</b>, 
+    <b>Graph: Waiting Box</b>, 
+    <b>Graph: Waiting Ratio</b>,
+    <b>Graph: Waiting Ratio Box</b>,
+    <b>Graph: Turnaround</b>,
+    <b>Graph: Turnaround Box</b>,
+    <b>Graph: CPU Bursts</b>,
+    <b>Graph: CPU Bursts Box</b>,
+    <b>Graph: Completed</b> or
+    <b>Graph: Completed Box</b>
+    toggles among the these  types of currently supported graphs.
+    Two types of graphs are supported, bar graphs and Box and Whiskers Graphs.
+    <b>Waiting</b> refers to type a process is in the ready queue.
+    <b>Waiting Ratio</b> is the ratio of CPU time to the sum of ready time plus
+    CPU time.  This ratio is useful for comparing processes with a wide range
+    of CPU times.  Larger values indicate less waiting time.
+    <b>Completed</b> gives the distribution of fraction completed for
+    the processes.
+    This is only useful for the lower level interface since at the end
+    of an experiment, all processes have completed.
+<LI><b>Show All Graphs</b>: displays all of the graphs that have been
+    previously hidden.
+<LI><b>Show Files</b> pust copies of the confiuration file, the run files
+    and the experiment files in the history window.
+<LI><b>Show All Table Data</b> displays a table containing the imnformation
+    that would be put in the log file when the <b>Log All Table Data</b>
+    is pushed.
+<LI><b>Draw Gantt Chart</b> will give a list of runs.  Selecting one of these
+     will draw a Gantt chart for that run.
+<LI><b>Limit Logged Data</b>: Allows a selected subset of the saved data to be
+       saved or graphed.  See <a href="#Selecting Data">Selecting Data to be
+       logged or graphed</a>.
+</UL>
+<p>
+<p>Below the buttons are two narrow progress bars showing the progress of the
+simulation.  The first is red and shows the fraction of total CPU time 
+that has been used so far.  
+When the red bar reaches the end, all processes are complete.
+The second progress bar is blue and shows the fraction of processes that
+have completed.
+
+<p>
+Finally, at the bottom of the window are three buttons.
+<UL>
+<LI><b>Help</b>: displays a help window which gives detailed descriptions
+    of the various buttons used by the simulator.  A message appears when the
+    pointer is moved inside one of these buttons.  
+    Useful help information has only been implemented for a few of the buttons.
+<LI><b>Reset</b>: removes all processes and initializes all variables.
+    The table data previously saved is not erased.
+<LI><b>Quit</b>: exits the simulator.  If the log file was open it is closed.
+</UL>
+
+<p>
+<hr>
+<a name="Random Numbers"></a>
+<h3>Random and Not so Random Numbers</h3>
+Java has a pseudo-random number generator which is used by default when values
+are selected from a distribution.  One of the problems with using this generator
+is that unless all of the distributions are constant, different runs on the
+same data produce slightly different results.<p>
+There are times when you may want to repeat an experiment or run 
+in order to look
+at it in more detail.  The option <b>portable true</b> allows you to do this.
+The simulator uses a portable pseudo-random number generator with a fixed seed
+so that if the same run is repeated, it should produce exactly the same results.
+The seed is reset at the start of each run, so that a run is not affected
+by previous runs.
+<p>
+By default, the simulator uses one random number generator for calculating
+all distributions.  CPU bursts and I/O bursts for processes are calculated
+on the fly for each process when they are needed.  A CPU burst times is 
+calculated when the process enters the ready queue.  Since the scheduling
+algorithm can affect the order in which processes enter the ready queue,
+the same set of processes running under different scheduling algorithms
+will have different burst times.  This makes it difficult to compare the
+algorithms.
+<p>
+If a seed value is specified in the Experimental Run file, independent
+random number generators are used for each instance of a distribution.
+This implies that if the same creator is used to create processes which
+are run through different algorithms, those processes will have
+exactly the same values for the CPU and I/O bursts for both runs.
+
+<p>
+<hr>
+<a name="Selecting Data"></a>
+<h3>Selecting Data to be Displayed or Graphed</h3>
+By default, the <b>Log All Table Data</b> and <b>Draw Graph</b> buttons include
+data from all of the experimental runs made.  You can use the
+<b>Limit Logged Data</b> button to determine which runs are included.
+<p>
+Pushing this button brings up a window containing one line for each run
+that has been finished.  Each line contains the name of a run and two buttons.
+Pushing the <b>Log</b> button changes it to <b>NoLog</b> and indicates that the
+corresponding run should not be included.  Pushing the same button again
+resets it.  The other button is marked <b>Show</b>.  When it is pushed the
+line disappears from the data editor window.  You can show the missing lines
+by pushing the <b>Show Some</b> button which changes it to <b>Show All</b>.
+Pushing it again resets it.  When finished, you can push the <b>Done</b> button.
+
+<p>
+<hr>
+<a name="The Experimental Run File Complete"></a>
+<h3>Experimental Runs: Advanced</h3>
+
+The first three lines of an experimental run file specify the name, comment, and
+algorithm as described <a href="#The Experimental Run File">above</a>.  The next
+lines are optional, and any combination can occur, but they must
+be in the order specified below.
+<p>
+The first optional line contains one of three words, <b>priorityoff</b>,
+<b>priorityon</b>, or <b>prioritypreempt</b> corresponding to no priority,
+non-preemptive priority, and preemptive priority, respectively.
+<p>
+The second optional line starts with the key word <b>key</b> followed by a 
+parameter which is the key to be used in the waiting time graphs.  It could
+be any string.
+<p>
+The third optional line starts with the key word <b>seed</b> and has a 
+parameter which is an integer.  This is used to initialize the random
+number generator.  
+See <a href="#Random Numbers">Random and Not So Random Numbers.</a>
+<p>The fourth and fifth optional lines specifiy the context switch time.
+See <a href="ContextSwitch">Context Switch.</a>
+<p>
+The file contains any number of sets of 7 lines giving
+the number of processes, first arrival time, interarrival distribution,
+duration distribution, cpu burst distribution, io burst distribution
+and base priority as 
+<a href="#The Experimental Run File">discussed earlier</a>.
+<p>
+The file format is as follows with at most one of the 
+<font color="#0000FF">blue</font> lines and either or both of the
+<font color="#FF0000">red</font> lines and the block of seven
+<font color="#FF00FF">magenta</font> lines repeated any number of times.
+<p>
+<b>name</b> <i>experimental_run_name</i><br>
+<b>comment </b><i>experimental_run_description</i><b></b><br>
+<b>algorithm</b> <i>algorithm_description</i><br>
+<b><font color="#0000FF">priorityoff</font></b><br>
+<b><font color="#0000FF">priorityon</font></b><br>
+<b><font color="#0000FF">prioritypreempt</font></b><br>
+<font color="#FF0000"><b>key</b> <i>key_string</i></font></b><br>
+<font color="#FF0000"><b>seed</b> <i>seed_value</i></font></b><br>
+<font color="#FF0000"><b>cstin</b> <i>context_switch_time_in</i></font></b><br>
+<font color="#FF0000"><b>cstout</b> <i>context_switch_time_out</i></font></b><br>
+<font color="#FF00FF">
+<b>numprocs</b> <i>number_of_processes</i><br>
+<b>firstarrival</b> <i>first_arrival_time</i><br>
+<b>interarrival</b> <i>interarrival_distribution</i><br>
+<b>duration</b> <i>duration_distribution</i><br>
+<b>cpuburst</b> <i>cpu_burst_distribution</i><br>
+<b>ioburst</b> <i>io_burst_distribution</i><br>
+<b>basepriority</b> <i>base_priority</i><br>
+</font>
+<p>
+<a name="thisrun"></a>
+Here is a sample run file which uses the second format which would be stored in
+the file <b>thisrun.run</b>:
+<pre>
+name thisrun
+comment This specifies two types of processes
+algorithm FCFS
+priorityon
+key Non-preemptive FCFS with processes having two priorities
+numprocs 10
+firstarrival 0.0
+interarrival constant 1.0
+duration uniform 500.0 1000.0
+cpuburst constant 50.0
+ioburst constant 1.0
+basepriority 1.0
+numprocs 30  
+firstarrival 0.0 
+interarrival constant 1.0 
+duration uniform 50.0 100.0 
+cpuburst exponential 20
+ioburst exponential 500
+basepriority 2.0 
+</pre>
+This defines two types of processes, 10 of which are longer running
+use little I/O, and are of low priority and 30 of which
+are relatively short, use more I/O and have higher priority.
+The scheduling algorithm is non-preemptive First-Come, First-Served
+using fixed process priorities.
+
+<p>
+<hr>
+<a name="Context Switch"</a>
+<h3>Context Switches</h3>
+Be default, the simulator assumes that context switches occur instantaneously.
+A context switch consists of two operations, moving the current process out
+of the CPU and moving a new process into the CPU.  By default, the simulator
+assumes that both of these times are zero.  You can set either of these time
+in the run file or in the exp file using a run modification.
+<p>
+During a context switch in, the process remains int he ready queue so this
+time contributes to the waiting time of the process.  When a context switch
+out occurs, the process changes state immediately to a switching state.
+In the Gantt charts, this is shown as a block space. If I/O is
+requested the I/O is delayed until the context switch out is done.
+If the process was preempted, it does not arrive in the ready queue until
+the context switch out is done. 
+
+<p>
+<hr>
+<a name="Using Files"></a>
+<h3>Files Used by the Simulator</h3>
+The simulator is very picky about the format of the files which describe
+experiments.  If a word is spelled incorrectly, the wrong case is used in
+a key word, or lines are out of order
+the simulator will reject the entire file.
+When starting up you should always check the yellow <b>History</b> window for
+information that was read in.  The following are sample lines that might be
+displayed in the window:
+<pre>
+  Runs read:         5 of 5
+  Experiments read:  3 of 3
+</pre>
+<hr>
+<a name="Gantt Charts"></a>
+<h3>Gantt Charts</h3>
+<p>
+The <b>Draw Gantt Chart</b> button in the last column
+of buttons is for producing Gantt Charts.
+If more than one run has been made, a menu pops up allowing you to choose which
+run to use.  Select one of the runs and a Gantt Chart will be displayed.
+If only one run has been done, this step is skipped.
+A sample Gantt Chart is shown in Figure 5.
+<p>
+<center>
+<IMG SRC="files/Gantt_1_086.gif">
+<p>
+Figure 5: A Gantt Chart.
+</center>
+<p>
+The <tt>Log</tt> button can be used to put a copy of the Gantt chart in the
+log file.  This might take a while on a slow machine as each pixel needs
+to be grabbed from the image and then converted to a GIF file.
+The <tt>Controls</tt> displays additional sliders for controlling the height and
+spacing of the bars.  It is possible to get a useful Gantt Chart of hundreds
+of processes by making the bars 1 pixel high.  Figure 6 shows the controls
+window.  Figure 7 shows two Gantt chars, each with 200 processes, one for
+FCFS and one for SJF.  Figure 8 shows a zoomed in view of one of these.
+<p>
+<center>
+<IMG SRC="files/GanttControls_1_086.gif">
+<p>
+Figure 6: Gantt Chart Controls.
+</center>
+<p>
+<hr>
+<p>
+<center>
+<IMG SRC="files/GanttFCFS_1_086.gif">
+<IMG SRC="files/GanttSJF_1_086.gif">
+<p>
+Figure 7: Two Gantt Charts, each with 200 processes.
+</center>
+<p>
+<hr>
+<p>
+<center>
+<IMG SRC="files/GanttSJFZoom_1_086.gif">
+<p>
+Figure 8: A zoomed in view of a Gantt Chart from Figure 7.
+</center>
+<p>
+
+
+<hr>
+<a name="Additional Features"></a>
+<h3>Additional Features</h3>
+
+The <b>History</b> and <b>Event</b> windows of the simulator are 
+scrollable text boxes
+that can contain useful information.  Clicking on the name of the box
+turns on automatic logging to that box.  For example, clicking on
+<b>Event Log (off)</b> changes this to <b>Event Log <i>time</i></b>
+and causes all events to be logged in this window.
+<p>
+Each of these windows has a <b>Clr</b> button at the top to empty it
+of text and a <b>Log</b> button which is active whenever the log is open.
+Pushing this button inserts a copy of the contents of the box into the log file.
+<p>
+There are two small buttons on either end of the top of these boxes.
+Pushing the leftmost one reduces the size of the font displayed while
+pushing the rightmost one increases the size of the font.  These do not affect
+what gets put into the log file.
+<p>
+I/O bursts of 0 are treated as very small I/O bursts.  This means that
+when a process finishes its CPU burst the scheduler picks a different
+process from the ready queue and then puts the process back in the
+ready queue.  Only if the ready queue was empty will that same process
+be given the CPU again.
+
+<p>
+<hr>
+
+</BODY>

@@ -1,0 +1,8 @@
+logdir .
+logfn logfile.html
+imagename gifim
+user Local User
+quiet
+portable true
+run myrun
+exp myexp
