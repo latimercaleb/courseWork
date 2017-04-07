@@ -1,0 +1,69 @@
+<!-- Chapter 9 Homework by Caleb Latimer -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Pacific Trails Resort:: Reservations</title>
+    <!-- [if lt IE 9]>
+    <script src = "http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+    <link rel="stylesheet" href="pacific.css" /> <!-- Uses the pacific.css stylesheet inside of folder -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!-- viewport tag configuration -->
+  </head>
+  <body>
+        <div id="wrapper">
+             <header>
+                     <h1>Pacific Trails Resort</h1>
+             </header>
+
+          <nav class = "left-column">
+           <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="yurts.html">Yurts</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="reservations.html">Reservations</a> </li>
+          </ul>
+          </nav>
+
+        <!--  <div id ="homehero"></div> --> <!-- Possibly remove this image link??? -->
+          <main class = "right-column">
+
+            <h2>Reservations at Pacific Trails</h2>
+            <h3>Contact Us</h3>
+            <p>Required infromation is marked with and asterisk (*).</p>
+
+            <form method="post" action="http://webdevbasics.net/scripts/pacific.php">
+              <label for="firstName">* First Name:</label>
+              <input type="text" name = "myFName" id="firstName" value="" required />
+
+              <label for="lastName">* Last Name:</label>
+              <input type="text" name="myLName" id="lastName" value="" required />
+
+              <label for="email" >* E-mail:</label>
+              <input type="email" name="myEmail" id="email" value="" required/>
+
+              <label for ="phone" >Phone:</label>
+              <input type="tel" name="myPhone" id="phone" value="" />
+
+              <label for="arrival">Arrival Date:</label>
+              <input type="date" id="arrival" name="arrivalDay" />
+
+              <label>Nights:</label>
+              <input type="number" min="1" max="14" />
+
+              <label for="feedback">* Comments:</label>
+              <textarea  name="myComments" id="feedback" rows="2" cols="20" required></textarea>
+
+              <input type="submit" value="Submit" id="mySubmit" />
+
+            </form>
+          </main>
+
+          <footer>
+            Copyright &copy; 2016 Pacific Trails Resort <br />
+            <a href = "mailto:Caleb@Latimer.com">Caleb@Latimer.com</a>
+          </footer>
+        </div>
+  </body>
+</html>
