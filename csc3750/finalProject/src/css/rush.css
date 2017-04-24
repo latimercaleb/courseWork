@@ -87,14 +87,8 @@ ul{
 }
 
 .outerRing{
-    border: 4px solid #DAA520;
-    background-image: url(../img/redbg.jpg);
-}
-
-.innerRing{
-    border: 2px solid #DAA520;
+    border: 2px double #DAA520;
     margin: 2px;
-    background-image: url(../img/new_year_background/new_year_background.png);
 }
 
 li{

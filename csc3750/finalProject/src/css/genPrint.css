@@ -8,7 +8,7 @@ header{
     display: block;
     font-weight: bold;
     text-align: center;
-    background-image none;
+    background-image: none;
     color:#000000;
     background-color: #FFFFFF;
 }
@@ -37,6 +37,10 @@ main{
     margin-left: 3px;
     margin-right: 3px;
 
+}
+
+#animatedGif{
+    display: none;
 }
 
 h4{
@@ -78,7 +82,7 @@ footer{
     font-size: 14px;
     font-family: sans-serif;
     text-align: center;
-    background-image none;
+    background-image: none;
     color:#000000;
     background-color: #FFFFFF;
 }
@@ -101,4 +105,8 @@ footer{
 
 footer a:link{
     color: blue;
+}
+
+a:after{
+    content: " (" attr(href) ")";
 }

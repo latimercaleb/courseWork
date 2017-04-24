@@ -9,7 +9,7 @@ header{
     display: block;
     font-weight: bold;
     text-align: center;
-    background-image none;
+    background-image: none;
     color:#000000;
     background-color: #FFFFFF;
 }
@@ -47,6 +47,13 @@ main{
     width: 150px;
     background-color: #FFFFFF;
     height: 810px;
+}
+
+#home{
+    width: 100%;
+    height:100%;
+    margin: 5px;
+    padding: 5px;
 }
 
 div a{
@@ -95,7 +102,7 @@ footer{
     font-size: 14px;
     font-family: sans-serif;
     text-align: center;
-    background-image none;
+    background-image: none;
     color:#000000;
     background-color: #FFFFFF;
 }
@@ -122,4 +129,8 @@ footer{
 
 footer a:link{
     color: blue;
+}
+
+a:after{
+    content: " (" attr(href) ")";
 }
