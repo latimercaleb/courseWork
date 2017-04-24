@@ -1,6 +1,6 @@
 body{
-border: 4px groove #DAA520;
-margin: 1px 1px 1px 1px;
+    border: 4px groove #DAA520;
+    margin: 1px 1px 1px 1px;
 }
 
 header{
@@ -116,6 +116,11 @@ footer a:link{
 footer a:active{
  color: gold;
  text-decoration: line-through;
+}
+
+form,h2,p{
+    margin: 10px;
+    padding: 20px;
 }
 
 label{

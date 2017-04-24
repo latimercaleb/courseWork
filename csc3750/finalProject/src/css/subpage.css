@@ -39,6 +39,16 @@ main{
     padding: 1px 10px 20px 10px;
 }
 
+ul{
+    -moz-column-count: 4;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 10px;
+    list-style-position: inside;
+}
+
 .left-col{
     display: block;
     float: left;
@@ -46,8 +56,6 @@ main{
     width: 150px;
     background-color: red;
     height: 810px;
-    position: fixed;
-
 }
 
 div a{
@@ -58,16 +66,9 @@ div a{
     color: #FFFFFF;
 }
 
-aside{
-    float: right;
-    width: 200px;
-    display: block;
-    font-weight: bold;
-    padding: 20px 5px 0px 20px;
-    background-color: red;
-    color: #FFFFFF;
+h3{
+    text-align: center;
 }
-
 
 table{
   margin-left: auto;
@@ -75,14 +76,23 @@ table{
   border: 1px solid #DAA520;
   border-collapse: collapse;
   width: 90%;
+  margin-bottom: 10px;
 }
 
-td{
+th{
+    font-weight: bold;
+}
+
+td,th{
     padding: 5px 5px 5px 5px;
     margin: 5px 5px 5px 5px;
     border: 1px solid #DAA520;
     overflow:hidden;
     text-align: center;
+}
+
+tr:nth-of-type(odd){
+    background-color: #dfc46d;
 }
 
 footer{
