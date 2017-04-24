@@ -1,0 +1,98 @@
+body{
+    border: 1em groove #DAA520;
+    margin: 0;
+    min-width: 0;
+}
+
+header{
+    padding: 2em;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    background-image: url(../img/redbg.jpg);
+    color:#DAA520;
+}
+
+nav{
+    font-style: oblique;
+    font-weight: bold;
+    font-family: serif;
+    text-align: center;
+    background-color: red;
+}
+
+nav a{
+   display: block;
+   text-decoration: none;
+   color: #FFFFFF;
+   border: 0.2em solid #DAA520;
+   padding: 0;
+   margin: 0;
+}
+
+.left-col{
+    display: block;
+    float: none;
+    font-weight: bold;
+    background-color: red;
+    height: auto;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: serif;
+    width: 100%;
+}
+
+div a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    border: 0.2em solid #DAA520;
+    padding: 0;
+    margin: 0;
+
+}
+
+aside{
+    display: none;
+}
+
+main{
+    font-family: sans-serif;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    background-image: url(../img/redbg.jpg);
+    color: #DAA520;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.footerbasic{
+    display: block;
+}
+
+.footersocial img, .footertoTop img{
+    display: none;
+}
+
+.footersocial{
+    display: block;
+    float: right;
+}
+
+.footertoTop{
+    display: block;
+    float: left;
+}
+
+footer a:link{
+    color: #FFFFFF;
+    border: none;
+}
