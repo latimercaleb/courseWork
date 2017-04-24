@@ -1,0 +1,3 @@
+C:/Users/OSO/Desktop/Lab 5 4111/EasyPaint/bin/CMakeFiles/easypaint.dir
+C:/Users/OSO/Desktop/Lab 5 4111/EasyPaint/bin/CMakeFiles/ALL_BUILD.dir
+C:/Users/OSO/Desktop/Lab 5 4111/EasyPaint/bin/CMakeFiles/ZERO_CHECK.dir

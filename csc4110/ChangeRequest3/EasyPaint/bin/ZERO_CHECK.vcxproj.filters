@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\otherUser\Desktop\CSC 4100 software engineering\Lab\ChangeRequest3\EasyPaint\bin\CMakeFiles\b43f9519a5b2704986734a475a3673db\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{938E1424-6BDF-304D-BE1B-9A9E16A5F688}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

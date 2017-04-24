@@ -1,0 +1,3 @@
+C:/Users/OSO/Desktop/CSC 4111 lab 4/QtHelloWorldQt5/bin/CMakeFiles/QtTest.dir
+C:/Users/OSO/Desktop/CSC 4111 lab 4/QtHelloWorldQt5/bin/CMakeFiles/ALL_BUILD.dir
+C:/Users/OSO/Desktop/CSC 4111 lab 4/QtHelloWorldQt5/bin/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,1 @@
+qt and cmake are in their own folders on E:/ go install em and get cracking! 

@@ -1,0 +1,13 @@
+-IC:/Users/OSO/Desktop/old qt example/bin
+-IC:/Users/OSO/Desktop/old qt example
+-IC:/Users/OSO/Desktop/old qt example/(
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/include
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/include/QtWidgets
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/include/QtGui
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/include/QtCore
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/mkspecs/win32-msvc2013
+-IC:/Users/OSO/Desktop/old qt example/)
+-DWIN32
+-o
+C:/Users/OSO/Desktop/old qt example/bin/moc_qtprogramwin.cpp
+C:/Users/OSO/Desktop/old qt example/qtprogramwin.h

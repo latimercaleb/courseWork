@@ -1,0 +1,13 @@
+-IC:/Users/OSO/Desktop/CSC 4111 lab 4/QtHelloWorldQt5/bin
+-IC:/Users/OSO/Desktop/CSC 4111 lab 4/QtHelloWorldQt5
+-IC:/Users/OSO/Desktop/CSC 4111 lab 4/QtHelloWorldQt5/(
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/include
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/include/QtWidgets
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/include/QtGui
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/include/QtCore
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/mkspecs/win32-msvc2013
+-IC:/Users/OSO/Desktop/CSC 4111 lab 4/QtHelloWorldQt5/)
+-DWIN32
+-o
+C:/Users/OSO/Desktop/CSC 4111 lab 4/QtHelloWorldQt5/bin/moc_qtprogramwin.cpp
+C:/Users/OSO/Desktop/CSC 4111 lab 4/QtHelloWorldQt5/qtprogramwin.h

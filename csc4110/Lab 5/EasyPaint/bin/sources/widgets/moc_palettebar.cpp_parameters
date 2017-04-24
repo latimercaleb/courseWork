@@ -1,0 +1,10 @@
+-IC:/Users/OSO/Desktop/Lab 5 4111/EasyPaint/.
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/include
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/include/QtWidgets
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/include/QtGui
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/include/QtCore
+-IC:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/mkspecs/win32-msvc2013
+-DWIN32
+-o
+C:/Users/OSO/Desktop/Lab 5 4111/EasyPaint/bin/sources/widgets/moc_palettebar.cpp
+C:/Users/OSO/Desktop/Lab 5 4111/EasyPaint/sources/widgets/palettebar.h

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\OSO\Desktop\CSC 4111 lab 4\QtHelloWorldQt5\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\CSC 4111 lab 4\QtHelloWorldQt5\qtprogramwin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\CSC 4111 lab 4\QtHelloWorldQt5\bin\moc_qtprogramwin.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\OSO\Desktop\CSC 4111 lab 4\QtHelloWorldQt5\bin\ui_qtprogramwin.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\CSC 4111 lab 4\QtHelloWorldQt5\qtprogramwin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\OSO\Desktop\CSC 4111 lab 4\QtHelloWorldQt5\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\OSO\Desktop\CSC 4111 lab 4\QtHelloWorldQt5\qtprogramwin.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\CSC 4111 lab 4\QtHelloWorldQt5\bin\CMakeFiles\06895adf020254caccd8e466797e1bab\moc_qtprogramwin.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{366FA19A-5622-3FC5-9DE4-6AFE6498AEA4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{77EC1460-ABAD-3335-B46F-FBC076B62CA8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{64DD74A5-8E99-329D-81CB-55B46974DF91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{9A6F6A08-A44B-31D9-A306-D1F267DD0D01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated">
+      <UniqueIdentifier>{A8AF82DF-DDF6-395E-B7A5-82A5C8D18507}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

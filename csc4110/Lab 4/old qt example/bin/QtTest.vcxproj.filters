@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\OSO\Desktop\old qt example\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\old qt example\qtprogramwin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\old qt example\bin\moc_qtprogramwin.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\OSO\Desktop\old qt example\bin\ui_qtprogramwin.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\old qt example\qtprogramwin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\OSO\Desktop\old qt example\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\OSO\Desktop\old qt example\qtprogramwin.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\old qt example\bin\CMakeFiles\9a19bc371bd7d9da4e17c2d099b1002c\moc_qtprogramwin.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C06DF662-0F12-3178-B627-05B51AF0A759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{900D668F-B7CB-3E08-9409-7D64BB6A05AE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{6E7E2687-206C-3A45-820F-78881745F8E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{AE76E215-850E-35D1-A1C9-8879CE953FDD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated">
+      <UniqueIdentifier>{189C231E-4F65-3EBC-9048-DC7252B50AD2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -7,31 +7,79 @@
     <!-- [if lt IE 9]>
     <script src = "http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif] -->
-    <link rel="stylesheet" href="theta.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!-- viewport tag configuration -->
     <link rel="shortcut icon" href="img/favicon.ico" />
-  </head>
-  <body>
 
-        <header>
-          <h1>Theta Tau</h1>
+    <script>
+          window.onload = function(){
+              alert('Even if you aren\'t interested, please give our design some feedback as we would like to stay current.');
+              return;
+          }
+          window.onbeforeunload = function(){
+              return "Thank you for your time and consideration";
+          }
+    </script>
+
+  </head>
+
+
+
+
+  <body>
+        <header class = "head">
+          <h1>
+          <img src="img/coa.png" display="inline-block"  height="150px" float="left"/>
+          Theta Tau</h1>
           <p>Epsilon Beta Chapter Wayne State University</p>
         </header>
 
         <nav>
           <a href="home.html">Home</a>
           <a href="about.html">About</a>
-            <a href="rush.html">Rush</a>
+          <a href="rush.html">Rush</a>
           <a href="contact.html">Contact Us</a>
         </nav>
 
         <main>
+            <h2>Interested in more information?</h2>
+            <p>Please fill out the form below:</p>
+            <form method="post" action ="mailto:latimercaleb@gmail.com" enctype="text/plain">
+              <label for="firstName">* First Name:</label>
+              <input type="text" name = "myFName" id="firstName" value="" required />
+
+              <label for="lastName">* Last Name:</label>
+              <input type="text" name="myLName" id="lastName" value="" required />
+
+              <label for="email" >* E-mail:</label>
+              <input type="email" name="myEmail" id="email" value="" required/>
+
+              <label for = "title"> Subject:</label>
+              <input type ="text" name = "subject" />
+
+              <label for="body">Message:</label>
+              <textarea  name="body" id="feedback" rows="5" cols="100"></textarea>
+
+              <input type="submit" value="Send" id="mySubmit" />
+
+            </form>
 
         </main>
-
           <footer>
-            Copyright &copy; 2017 Epsilon Beta Chapter of Theta Tau <br />
-            <a href = "mailto:latimercaleb@gmail.com">latimercaleb@gmail.com</a>
+             <div class = "footerbasic">
+                 Copyright &copy; 2017 Epsilon Beta Chapter of Theta Tau <br />
+                 Built by Caleb Latimer - ej1297 <br/>
+                 <a href = "mailto:latimercaleb@gmail.com">latimercaleb@gmail.com</a>
+                 <br/><br/>
+             </div>
+           <div class="footersocial">
+                <a target="_blank" title="follow me on facebook" href="http://www.facebook.com/ebthetatau"><img alt="follow us on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/badgefacebook.png" border=0></a>
+                   <br/><br/>
+           </div>
+           <div class = "footertoTop">
+                <a href="#top"><img src = "img/up.jpg" alt="back to top" width="42" height="42" /></a>
+           </div>
+
           </footer>
   </body>
 </html>

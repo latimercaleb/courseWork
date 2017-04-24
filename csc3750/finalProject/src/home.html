@@ -1,5 +1,3 @@
-<!-- Note to self: Fix, indentation scheme, and choose a color scheme, lastly reflect on design choice and make any tweaks neccessary to finalize the product design. Aim to fully construct content for the pages today after the product push -->
-
 <!-- CSC 3750 final project code by Caleb Latimer -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,10 +12,9 @@
     <link rel="shortcut icon" href="img/favicon.ico" />
   </head>
   <body>
-
         <header class = "head">
           <h1>
-          <img src="img/coa.png" display="inline-block"  height="150px" float="left"/> <!-- This needs better formatting -->
+          <img src="img/coa.png" display="inline-block"  height="150px" float="left"/>
           Theta Tau</h1>
           <p>Epsilon Beta Chapter Wayne State University</p>
         </header>
@@ -25,37 +22,55 @@
         <nav>
           <a href="home.html">Home</a>
           <a href="about.html">About</a>
-            <a href="rush.html">Rush</a>
+          <a href="rush.html">Rush</a>
           <a href="contact.html">Contact Us</a>
         </nav>
 
         <main>
 
-          <div class = "brotherhood">
-            <img class = "bhood-slides" src="img/bhood1.jpg" width="50%"/>
-            <img class = "bhood-slides" src="img/bhood2.jpg"/>
-            <img class = "bhood-slides" src="img/bhood3.jpg"/>
-          </div>
-            <!-- Get one of them to work first
-          <div class = "professional" >
-              <img class = "pd-slides" src="img/pd1.jpg"/>
-              <img class = "pd-slides" src="img/pd2.jpg"/>
-              <img class = "pd-slides" src="img/pd3.jpg"/>
+          <div class = "house">
+            <img src = "img/house.jpg" width="100%" height="100%" alt="Picture of the newly rennovated chapter house" />
           </div>
 
-          <div class= "service">
-              <img class = "service-slides" src="img/service.jpg"/>
-              <img class = "service-slides" src="img/service2.jpg"/>
-              <img class = "service-slides" src="img/service3.jpg"/>
-          </div>
-      -->
+          <div class = "pillar">
+            <h4>Theta Tau Pillars</h4>
+            <p id="specialP">The purpose of Theta Tau is to develop and maintain a high standard of professional interest among it's members and to unite them in a strong bond of fraternal fellowship </p>
+            <table>
+              <tr>
+                  <td><img src="img/bhood1.jpg"/></td>
+                  <td><img src="img/pd1.jpg"/></td>
+              </tr>
+
+              <tr>
+                  <td class="caption">We forge lifelong bonds of fraternal friendship, a journey that develops and delivers a network of lasting personal and professional relationships. We foster an inviting, safe, and social environment in which our members become lifelong friends.</td>
+
+                  <td class="caption">We develop and nurture engineers with strong communication, problem-solving, collaboration, and leadership skills that we demonstrate in our profession, our community, and in our lives.</td>
+              </tr>
+              <tr>
+                  <td><img src="img/service.jpg"/></td>
+                  <td><img src="img/bhood3.jpg"/></td>
+              </tr>
+              <tr>
+                  <td class="caption">We are known for our service to our college, university and the larger community. Our service projects create a unifying environment for learning and personal growth for our members.</td>
+                  <td class="caption">Our Wayne State Chapter boasts a roster of over 20 students spanning most engineering disciplines</td>
+              </tr>
+            </table>
         </main>
-          <footer><!-- Incorporate social-buttons in the footer -->
-            Copyright &copy; 2017 Epsilon Beta Chapter of Theta Tau <br />
-            Built by Caleb Latimer - ej1297 <br/>
-            <a href = "mailto:latimercaleb@gmail.com">latimercaleb@gmail.com</a>
-            <br/><br/>
-            <!-- need back to top button, can integrate in javascript -->
+          <footer>
+             <div class = "footerbasic">
+                 Copyright &copy; 2017 Epsilon Beta Chapter of Theta Tau <br />
+                 Built by Caleb Latimer - ej1297 <br/>
+                 <a href = "mailto:latimercaleb@gmail.com">latimercaleb@gmail.com</a>
+                 <br/><br/>
+             </div>
+           <div class="footersocial">
+                <a target="_blank" title="follow me on facebook" href="http://www.facebook.com/ebthetatau"><img alt="follow us on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/badgefacebook.png" border=0></a>
+                   <br/><br/>
+           </div>
+           <div class = "footertoTop">
+                <a href="#top"><img src = "img/up.jpg" alt="back to top" width="42" height="42" /></a>
+           </div>
+
           </footer>
   </body>
 </html>

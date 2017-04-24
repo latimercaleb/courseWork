@@ -1,0 +1,10 @@
+﻿Build started 4/11/2017 11:31:52 PM.
+     1>Project "C:\Users\otherUser\Desktop\CSC 4100 software engineering\Lab\ChangeRequest3\EasyPaint\bin\ZERO_CHECK.vcxproj" on node 2 (Build target(s)).
+     1>CustomBuild:
+         Checking Build System
+         CMake does not need to re-run because C:/Users/otherUser/Desktop/CSC 4100 software engineering/Lab/ChangeRequest3/EasyPaint/bin/CMakeFiles/generate.stamp is up-to-date.
+     1>Done Building Project "C:\Users\otherUser\Desktop\CSC 4100 software engineering\Lab\ChangeRequest3\EasyPaint\bin\ZERO_CHECK.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.95

@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\imagearea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\datasingleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\additionaltools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\abstracteffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\negativeeffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\grayeffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\binarizationeffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\effectwithsettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\gammaeffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\undocommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\toolbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\colorchooser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\palettebar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\palettebutton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\shortcutedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\customfiltersettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\sharpenfiltersettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\gaussianblurfiltersettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\imagepreview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\dialogs\resizedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\dialogs\settingsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\dialogs\textdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\dialogs\effectsettingsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\abstractinstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\abstractselection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\selectioninstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\pencilinstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\lineinstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\eraserinstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\rectangleinstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\ellipseinstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\fillinstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\sprayinstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\magnifierinstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\colorpickerinstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\curvelineinstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\textinstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\moc_mainwindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\moc_easypaintenums.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\moc_imagearea.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\moc_datasingleton.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\moc_additionaltools.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\effects\moc_abstracteffect.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\effects\moc_negativeeffect.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\effects\moc_grayeffect.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\effects\moc_binarizationeffect.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\effects\moc_customeffect.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\effects\moc_effectwithsettings.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\effects\moc_gammaeffect.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\effects\moc_gaussianblureffect.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\effects\moc_sharpeneffect.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\moc_undocommand.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\widgets\moc_toolbar.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\widgets\moc_colorchooser.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\widgets\moc_palettebar.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\widgets\moc_palettebutton.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\widgets\moc_shortcutedit.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\widgets\moc_abstracteffectsettings.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\widgets\moc_customfiltersettings.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\widgets\moc_sharpenfiltersettings.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\widgets\moc_gaussianblurfiltersettings.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\widgets\moc_imagepreview.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\dialogs\moc_resizedialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\dialogs\moc_settingsdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\dialogs\moc_textdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\dialogs\moc_effectsettingsdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_abstractinstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_abstractselection.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_selectioninstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_pencilinstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_lineinstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_eraserinstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_rectangleinstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_ellipseinstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_fillinstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_sprayinstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_magnifierinstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_colorpickerinstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_curvelineinstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\sources\instruments\moc_textinstrument.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\qrc_resources.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\easypaintenums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\imagearea.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\datasingleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\additionaltools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\abstracteffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\negativeeffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\grayeffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\binarizationeffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\customeffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\effectwithsettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\gammaeffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\gaussianblureffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\effects\sharpeneffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\undocommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\toolbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\colorchooser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\palettebar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\palettebutton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\shortcutedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\abstracteffectsettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\customfiltersettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\sharpenfiltersettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\gaussianblurfiltersettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\widgets\imagepreview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\dialogs\resizedialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\dialogs\settingsdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\dialogs\textdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\dialogs\effectsettingsdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\abstractinstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\abstractselection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\selectioninstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\pencilinstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\lineinstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\eraserinstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\rectangleinstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\ellipseinstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\fillinstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\sprayinstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\magnifierinstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\colorpickerinstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\curvelineinstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\instruments\textinstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\3e66831e6a9e5b8627e4005b7c34e3d4\moc_mainwindow.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\3e66831e6a9e5b8627e4005b7c34e3d4\moc_easypaintenums.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\3e66831e6a9e5b8627e4005b7c34e3d4\moc_imagearea.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\3e66831e6a9e5b8627e4005b7c34e3d4\moc_datasingleton.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\3e66831e6a9e5b8627e4005b7c34e3d4\moc_additionaltools.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\aa248ffe2444607236b0a258cf3eaa57\moc_abstracteffect.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\aa248ffe2444607236b0a258cf3eaa57\moc_negativeeffect.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\aa248ffe2444607236b0a258cf3eaa57\moc_grayeffect.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\aa248ffe2444607236b0a258cf3eaa57\moc_binarizationeffect.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\aa248ffe2444607236b0a258cf3eaa57\moc_customeffect.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\aa248ffe2444607236b0a258cf3eaa57\moc_effectwithsettings.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\aa248ffe2444607236b0a258cf3eaa57\moc_gammaeffect.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\aa248ffe2444607236b0a258cf3eaa57\moc_gaussianblureffect.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\aa248ffe2444607236b0a258cf3eaa57\moc_sharpeneffect.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\3e66831e6a9e5b8627e4005b7c34e3d4\moc_undocommand.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\6a856cc1a931738b9e62187979a6eedd\moc_toolbar.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\6a856cc1a931738b9e62187979a6eedd\moc_colorchooser.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\6a856cc1a931738b9e62187979a6eedd\moc_palettebar.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\6a856cc1a931738b9e62187979a6eedd\moc_palettebutton.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\6a856cc1a931738b9e62187979a6eedd\moc_shortcutedit.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\6a856cc1a931738b9e62187979a6eedd\moc_abstracteffectsettings.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\6a856cc1a931738b9e62187979a6eedd\moc_customfiltersettings.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\6a856cc1a931738b9e62187979a6eedd\moc_sharpenfiltersettings.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\6a856cc1a931738b9e62187979a6eedd\moc_gaussianblurfiltersettings.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\6a856cc1a931738b9e62187979a6eedd\moc_imagepreview.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\8b98e0ce708a1449b3a04851c49df0b7\moc_resizedialog.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\8b98e0ce708a1449b3a04851c49df0b7\moc_settingsdialog.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\8b98e0ce708a1449b3a04851c49df0b7\moc_textdialog.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\8b98e0ce708a1449b3a04851c49df0b7\moc_effectsettingsdialog.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_abstractinstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_abstractselection.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_selectioninstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_pencilinstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_lineinstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_eraserinstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_rectangleinstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_ellipseinstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_fillinstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_sprayinstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_magnifierinstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_colorpickerinstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_curvelineinstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\bin\CMakeFiles\26c3a2610922e59d5f0497a77a7766b2\moc_textinstrument.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\OSO\Desktop\Lab 5 4111\EasyPaint\sources\resources.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{899DD40E-19DA-3D3D-9384-202241491A4B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{72C35FBC-684B-3400-B6B7-FC7DD32BBC73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{FF1F14D1-A559-3DBB-9067-5473450D9515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{8AF1DCBB-D87F-3A5D-8BEC-B85DA47678CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{F4B075F5-AA95-36CA-8D6E-27D14031563A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

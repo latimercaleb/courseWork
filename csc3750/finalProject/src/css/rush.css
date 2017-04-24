@@ -1,0 +1,136 @@
+body{
+border: 4px groove #DAA520;
+margin: 1px 1px 1px 1px;
+}
+
+header{
+    padding: 5px 20px 5px 20px;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    background-image: url(../img/redbg.jpg);
+    color:#DAA520;
+}
+
+nav{
+    padding: 5px 20px 5px 20px;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: serif;
+    font-size: 16px;
+    text-align: center;
+    background-color: red;
+}
+
+nav a{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+main{
+    font-family: sans-serif;
+    margin-left: 3px;
+    margin-right: 3px;
+    background-image: url(../img/new_year_background/new_year_background.png);
+}
+
+h1{
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+h3{
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+h4{
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p{
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+dl{
+    padding: 10px 10px 10px 10px;
+    margin: 5px 5px 5px 5px;
+}
+
+dt{
+    font-style: italic;
+    font-weight: bolder;
+    padding: 20px 20px 20px 20px;
+    margin: 2px 2px 2px 2px;
+    border: 2px groove #DAA520;
+}
+
+dd{
+    font-style: oblique;
+    font-weight: lighter;
+    padding: 20px 20px 20px 20px;
+    margin: 5px 5px 5px 5px;
+}
+
+ul{
+    padding: 10px 10px 10px 10px;
+    margin: 5px 5px 5px 5px;
+}
+
+.outerRing{
+    border: 4px solid #DAA520;
+    background-image: url(../img/redbg.jpg);
+}
+
+.innerRing{
+    border: 2px solid #DAA520;
+    margin: 2px;
+    background-image: url(../img/new_year_background/new_year_background.png);
+}
+
+li{
+    padding: 20px 20px 20px 20px;
+    margin: 5px 5px 5px 5px;
+    font-style: normal;
+    font-weight: 200;
+    list-style-type: lower-greek;
+    list-style-position: inside;
+}
+
+footer{
+    margin: 2px 2px 2px 2px;
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+    background-image: url(../img/redbg.jpg);
+    color: #DAA520;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.footerbasic{
+display:inline-block;
+}
+
+.footersocial{
+display: inline-block;
+float: right;
+}
+
+.footertoTop{
+display: block;
+float: left;
+}
+
+footer a:link{
+    color: #FFFFFF;
+}

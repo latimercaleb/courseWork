@@ -1,0 +1,3 @@
+C:/Users/otherUser/Desktop/CSC 4100 software engineering/Lab/ChangeRequest3/EasyPaint/bin/CMakeFiles/easypaint.dir
+C:/Users/otherUser/Desktop/CSC 4100 software engineering/Lab/ChangeRequest3/EasyPaint/bin/CMakeFiles/ALL_BUILD.dir
+C:/Users/otherUser/Desktop/CSC 4100 software engineering/Lab/ChangeRequest3/EasyPaint/bin/CMakeFiles/ZERO_CHECK.dir

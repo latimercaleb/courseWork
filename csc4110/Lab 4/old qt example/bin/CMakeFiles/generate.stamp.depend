@@ -1,0 +1,52 @@
+# CMake generation dependency list for this directory.
+C:/Users/OSO/Desktop/old qt example/CMakeLists.txt
+C:/Users/OSO/Desktop/old qt example/bin/CMakeFiles/3.7.2/CMakeSystem.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Users/OSO/Desktop/old qt example/bin/CMakeFiles/3.7.2/CMakeCCompiler.cmake
+C:/Users/OSO/Desktop/old qt example/bin/CMakeFiles/3.7.2/CMakeCXXCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Platform/WindowsPaths.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Platform/Windows-MSVC.cmake
+C:/Users/OSO/Desktop/old qt example/bin/CMakeFiles/3.7.2/CMakeRCCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeCommonLanguageInclude.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Core/Qt5CoreConfig.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Core/Qt5CoreMacros.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeParseArguments.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QDDSPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QJp2Plugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QMngPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Widgets/Qt5Widgets_AccessibleFactory.cmake
+C:/Qt/Qt5.3.1/5.3/msvc2013_64_opengl/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeParseArguments.cmake

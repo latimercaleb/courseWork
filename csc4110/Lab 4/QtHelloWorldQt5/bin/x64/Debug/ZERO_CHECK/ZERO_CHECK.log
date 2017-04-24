@@ -1,0 +1,10 @@
+﻿Build started 2/7/2017 2:09:08 AM.
+     1>Project "C:\Users\OSO\Desktop\CSC 4111 lab 4\QtHelloWorldQt5\bin\ZERO_CHECK.vcxproj" on node 2 (Rebuild target(s)).
+     1>CustomBuild:
+         Checking Build System
+         CMake does not need to re-run because C:/Users/OSO/Desktop/CSC 4111 lab 4/QtHelloWorldQt5/bin/CMakeFiles/generate.stamp is up-to-date.
+     1>Done Building Project "C:\Users\OSO\Desktop\CSC 4111 lab 4\QtHelloWorldQt5\bin\ZERO_CHECK.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.24
