@@ -1,6 +1,6 @@
 body{
-border: 4px groove #DAA520;
-margin: 1px 1px 1px 1px;
+    border: 4px groove #DAA520;
+    margin: 1px 1px 1px 1px;
 }
 
 header{
@@ -36,20 +36,24 @@ main{
     margin-right: 3px;
     background-image: url(../img/new_year_background/new_year_background.png);
 }
+
 h4{
     text-align: center;
 }
+
 #specialP{
     text-align: center;
 }
+
 .brotherhood{
     padding: 5px 20px 5px 20px;
     border: 2px inset yellow;
     display: inline-block;
 
 }
+
 table{
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: auto;
   border: 1px solid #DAA520;
   border-collapse: collapse;
@@ -63,6 +67,7 @@ td{
     overflow:hidden;
      text-align: center;
 }
+
 .professional{
     padding: 5px 20px 5px 20px;
     border: 2px inset pink;
@@ -83,22 +88,25 @@ footer{
     margin: 2px 2px 2px 2px;
     padding: 10px 10px 10px 10px;
     font-weight: bold;
-     background-image: url(../img/redbg.jpg);
+    background-image: url(../img/redbg.jpg);
     color: #DAA520;
     font-size: 14px;
     font-family: sans-serif;
     text-align: center;
 }
+
 .footerbasic{
-display:inline-block;
+    display:inline-block;
 }
+
 .footersocial{
-display: inline-block;
-float: right;
+    display: inline-block;
+    float: right;
 }
+
 .footertoTop{
-display: block;
-float: left;
+    display: block;
+    float: left;
 }
 
 footer a:link{
