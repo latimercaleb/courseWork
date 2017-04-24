@@ -1,0 +1,104 @@
+body{
+    border: 4px groove #DAA520;
+    margin: 1px 1px 1px 1px;
+}
+
+header{
+    padding: 5px 20px 5px 20px;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    background-image none;
+    color:#000000;
+    background-color: #FFFFFF;
+}
+
+nav{
+    padding: 5px 20px 5px 20px;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: serif;
+    font-size: 16px;
+    text-align: center;
+    background-color: red;
+    display: none;
+}
+
+nav a{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+main{
+    font-family: sans-serif;
+    margin-left: 3px;
+    margin-right: 3px;
+
+}
+
+h4{
+    text-align: center;
+}
+
+#specialP{
+    text-align: center;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+td{
+    padding: 5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
+    border: 1px solid #DAA520;
+    display: block;
+    overflow:hidden;
+    text-align: center;
+}
+
+.break{
+    page-break-before: always;
+}
+
+.caption{
+    text-align: center;
+}
+
+footer{
+    margin: 2px 2px 2px 2px;
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-align: center;
+    background-image none;
+    color:#000000;
+    background-color: #FFFFFF;
+}
+
+.footerbasic{
+    display:inline-block;
+}
+
+.footersocial{
+    display: inline-block;
+    float: right;
+    display: none;
+}
+
+.footertoTop{
+    display: block;
+    float: left;
+    display: none;
+}
+
+footer a:link{
+    color: blue;
+}
