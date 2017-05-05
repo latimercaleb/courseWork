@@ -1,0 +1,6 @@
+The result of the PDA follows the same notation as the input file, the strings are marked by number in the same sequence as they were provided in the input file: 
+ 
+1 : Accepted 
+2 : Rejected 
+3 : Rejected 
+4 : Rejected 

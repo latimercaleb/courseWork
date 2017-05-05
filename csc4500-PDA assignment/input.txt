@@ -1,0 +1,6 @@
+1 aaabbb
+2 ababab
+3 aababb
+4 abbaab
+
+
