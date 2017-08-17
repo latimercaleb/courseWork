@@ -1,0 +1,1 @@
+SELECT CRN,Name FROM Classes1 AS A INNER JOIN ClassesUser AS B ON A.CourseID = B.Class_CourseID INNER JOIN Users AS C ON B.Users_Id = C.Id WHERE C.Id = 1
