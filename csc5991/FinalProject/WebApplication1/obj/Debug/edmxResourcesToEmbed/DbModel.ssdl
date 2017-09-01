@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TableModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TableModelStoreContainer">
+    <EntitySet Name="Users" EntityType="TableModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Classes1" EntityType="TableModel.Store.Classes1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClassesUser" EntityType="TableModel.Store.ClassesUser" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ClassesUser_Classes" Association="TableModel.Store.FK_ClassesUser_Classes">
+      <End Role="Classes" EntitySet="Classes1" />
+      <End Role="ClassesUser" EntitySet="ClassesUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClassesUser_User" Association="TableModel.Store.FK_ClassesUser_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="ClassesUser" EntitySet="ClassesUser" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LoginID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Classes1">
+    <Key>
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="CourseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CRN" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClassesUser">
+    <Key>
+      <PropertyRef Name="Class_CourseID" />
+      <PropertyRef Name="Users_Id" />
+    </Key>
+    <Property Name="Class_CourseID" Type="int" Nullable="false" />
+    <Property Name="Users_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ClassesUser_Classes">
+    <End Role="Classes" Type="TableModel.Store.Classes1" Multiplicity="1" />
+    <End Role="ClassesUser" Type="TableModel.Store.ClassesUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Classes">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="ClassesUser">
+        <PropertyRef Name="Class_CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClassesUser_User">
+    <End Role="ClassesUser" Type="TableModel.Store.ClassesUser" Multiplicity="*" />
+    <End Role="User" Type="TableModel.Store.Users" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClassesUser">
+        <PropertyRef Name="Users_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
