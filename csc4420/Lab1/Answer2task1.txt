@@ -1,0 +1,91 @@
+Task 1
+
+who: Displays user name, permissions and date and time.
+
+whoami: Displays user name
+
+uname: Displays OS name
+
+ls: Lists content inside of the current directory 
+
+mkdir Folder1: Make a new folder called Folder1
+
+cd Folder1: Changes directory of terminal inside of the new folder we just made
+
+ls: Displays the content of the new folder which is blank
+
+cat /etc/os-release: Displays information about the OS, including ID version name and other information
+
+cp /etc/os-release ./: cp means copy. So it copies this file to ./ or the current directory
+
+ls: displays the files in the current directory currently displays the os-release file
+
+cat os-release: displays the content of that file in the terminal
+
+mv os-release newname.txt: moves the information that was is in os-release to a new file called newname.txt, also creates the newname.txt
+
+ls: Now only displays newname.txt
+
+rm newname.txt: Deletes newname.txt
+
+ls: displays no contents because we deleted it in the prior steps 
+
+cd ../: moves up a level in the directory 
+
+ls: shows my text document and the folder1 
+
+rmdir Folder1: deletes folder1 
+
+ls: displays only my textfile 
+
+ls -l: displays information about the textfile in long-listing format
+
+------------------------------------------------------------------------------------------------------
+Task 4 
+
+Most of my answers were pretty spot on from the combination of last lab and things I researched before with the lecture. New context added after a comma for the edits I made 
+
+who: Displays user name, permissions and date and time. Shows who is logged in currently
+
+whoami: Displays user name. Print effective userid 
+
+uname: Displays OS name, prints systems information
+
+ls: Lists content inside of the current directory,  list directory contents
+
+mkdir Folder1: Make a new folder called Folder1, make directories 
+
+cd Folder1: Changes directory of terminal inside of the new folder we just made, no man entry for cd
+
+ls: Displays the content of the new folder which is blank
+
+cat /etc/os-release: Displays information about the OS, including ID version name and other information, concatenate files and print the standard output 
+
+cp /etc/os-release ./: cp means copy. So it copies this file to ./ or the current directory, copies files and directories
+
+ls: displays the files in the current directory currently displays the os-release file
+
+cat os-release: displays the content of that file in the terminal
+
+mv os-release newname.txt: moves the information that was is in os-release to a new file called newname.txt, also creates the newname.txt, move (rename) file 
+
+ls: Now only displays newname.txt
+
+rm newname.txt: Deletes newname.txt, remove files and directories 
+
+ls: displays no contents because we deleted it in the prior steps 
+
+cd ../: moves up a level in the directory 
+
+ls: shows my text document and the folder1 
+
+rmdir Folder1: deletes folder1 
+
+ls: displays only my textfile 
+
+ls -l: displays information about the textfile in long-listing format
+
+------------------------------------------------------------------------------------------------------
+
+
+

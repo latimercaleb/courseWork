@@ -1,0 +1,8 @@
+#!/bin/csh
+setenv CLASSPATH ../jars/Jeli.jar:./Jeli.jar
+set TO  = "-u"
+if ("$1" == "-w") then
+   set TO  = "-w"
+endif
+java Jeli.ConvertFile $TO myrun.run myexp.exp psconfig
+chmod 755 runps

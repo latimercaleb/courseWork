@@ -1,8 +1,0 @@
-name myexp
-comment This experiment contains 2 runs
-run myrun algorithm RR 1 key "RR 1"
-run myrun algorithm RR 10 key "RR 10"
-run myrun algorithm RR 15 key "RR 15"
-run myrun algorithm RR 50 key "RR 50"
-run myrun algorithm RR 100 key "RR 100"
-run myrun algorithm RR 101 key "RR 101"
